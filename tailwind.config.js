@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./dist/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: { 
+        document:['Space Grotesk']
+        
+      }
+    },
   },
   plugins: [],
 }

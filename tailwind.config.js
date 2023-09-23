@@ -5,8 +5,15 @@ module.exports = {
     extend: {
       fontFamily: { 
         document:['Space Grotesk']
+      }, 
+      spacing: { 
+        '4rem':'4rem', 
+      }, 
+      backgroundImage: {
+        'forest-view': "url('/dist/img/b4b9101e8cdbad99d7b0.jpg')",
         
       }
+
     },
   },
   plugins: [],

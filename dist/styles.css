@@ -546,6 +546,18 @@ video {
   margin-right: 0.75rem;
 }
 
+.mt-9{
+  margin-top: 2.25rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mt-2{
+  margin-top: 0.5rem;
+}
+
 .block{
   display: block;
 }
@@ -566,6 +578,38 @@ video {
   height: 100vh;
 }
 
+.h-40{
+  height: 10rem;
+}
+
+.h-\[\]{
+  height: ;
+}
+
+.h-\[100px\]{
+  height: 100px;
+}
+
+.h-\[200px\]{
+  height: 200px;
+}
+
+.h-\[300px\]{
+  height: 300px;
+}
+
+.h-\[10rem\]{
+  height: 10rem;
+}
+
+.h-\[3rem\]{
+  height: 3rem;
+}
+
+.h-\[2rem\]{
+  height: 2rem;
+}
+
 .w-\[100\%\]{
   width: 100%;
 }
@@ -576,11 +620,6 @@ video {
 
 .w-full{
   width: 100%;
-}
-
-.rotate-180{
-  --tw-rotate: 180deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform{
@@ -594,7 +633,7 @@ video {
 }
 
 .animate-spin{
-  animation: spin 1s linear infinite;
+  animation: spin .5s linear 1;
 }
 
 .flex-col{
@@ -655,6 +694,14 @@ video {
   padding: 0.5rem;
 }
 
+.p-5{
+  padding: 1.25rem;
+}
+
+.p-6{
+  padding: 1.5rem;
+}
+
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -688,6 +735,14 @@ video {
   font-size: 100px;
 }
 
+.text-\[120px\]{
+  font-size: 120px;
+}
+
+.text-\[110px\]{
+  font-size: 110px;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -719,31 +774,12 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-all{
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.hover\:block:hover{
-  display: block;
-}
-
 .hover\:flex:hover{
   display: flex;
 }
 
-.hover\:hidden:hover{
-  display: none;
-}
-
 .hover\:-translate-y-1:hover{
   --tw-translate-y: -0.25rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:rotate-180:hover{
-  --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 

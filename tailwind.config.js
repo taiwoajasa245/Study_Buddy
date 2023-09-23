@@ -10,8 +10,10 @@ module.exports = {
         '4rem':'4rem', 
       }, 
       backgroundImage: {
-        'forest-view': "url('/dist/img/b4b9101e8cdbad99d7b0.jpg')",
-        
+        'forest-view': "url('/dist/img/b4b9101e8cdbad99d7b0.jpg')", 
+      }, 
+      animation: {
+        'spin': 'spin .5s linear 1',
       }
 
     },

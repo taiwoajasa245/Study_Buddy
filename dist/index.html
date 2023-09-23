@@ -12,10 +12,6 @@
     <title>StudyBuddy</title>
 </head>
 
-<!-- <style> <style>
-    font-family: 'Space Grotesk' sans-serif;
-</style></style> -->
-
 <body class="text-pink-100 bg-forest-view font-document ">
     
     <div id="allsection" class="w-full h-screen px-4rem">
@@ -58,16 +54,30 @@
         </main>
 
 
-        <footer class="w-full flex h-40 hover:flex justify-between items-center">
+        <footer id="foot" class="w-full flex h-30 border hover:flex justify-between items-center">
             <div id="music">
                 <h1> i love jesus </h1>
             </div>
     
             <div>
-                <button class="hover:flex"> <svg xmlns="http://www.w3.org/2000/svg" height="2em" class="hidden hover:fill-slate-300 " viewBox="0 0 448 512"><style>svg{fill: rgb(252 231 243)}</style><path d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"/></svg> </button>
+                <button> <svg xmlns="http://www.w3.org/2000/svg" height="2em" id="full-screen" class="  hover:fill-slate-300" viewBox="0 0 448 512"><style>svg{fill: rgb(252 231 243)}</style><path d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32H320zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32V352z"/></svg> </button>
             </div>
         </footer>
     </div>
 </body>
+<!-- <script> 
+const footer = document.getElementById("foot"); 
+const fullScreenLogo = document.getElementById("full-screen"); 
+
+console.log(footer);
+console.log(fullScreenLogo);
+
+const showHidden = e => { e.style.display = 'flex' }; 
+
+footer.addEventListener("mouseover", showHidden(fullScreenLogo));
+
+
+
+</script> -->
 <script defer="defer" src="script.js"></script>
 </html>

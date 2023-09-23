@@ -27,23 +27,23 @@
         <main class=" px-10 py-5  flex flex-col justify-evenly   items-center ">
             <section id="top-btn" class=" w-100rem h-100rem">
                 <ul class="w-[100%] h-[100%] flex justify-evenly items-start"> 
-                    <li class="p-2 mx-3 border-2 border-white font-semibold rounded-[20px] px-4 hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ">pomodoro</li>
-                    <li class="p-2 mx-3 border-2 border-white  font-semibold rounded-[20px] px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">short break</li>
-                    <li class="p-2 mx-3 border-2 border-white font-semibold rounded-[20px] px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none" >long break</li>
+                    <li id="pomodoro" class="p-2 mx-3 border-2 border-white font-semibold rounded-[20px] px-4 hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ">pomodoro</li>
+                    <li id="short_break" class="p-2 mx-3 border-2 border-white  font-semibold rounded-[20px] px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">short break</li>
+                    <li id="long_break" class="p-2 mx-3 border-2 border-white font-semibold rounded-[20px] px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none" >long break</li>
                 </ul>
             </section>
             <section>
-                <p id="timer" class="text-[100px] font-semibold text-pink-50 ">
-                    05:00
+                <p id="timer" title="click here to stop timer" class="text-[100px] hover:cursor-pointer font-semibold text-pink-50 ">
+                    <span id="min"> 25</span>:<span id="sec">00</span>
                 </p>
             </section>
             <section class="w-100rem flex justify-center items-center">
                 <div >
-                    <button id="start_btn" class="p-1 mx-1 text-black text-2xl font-bold bg-pink-100 hover:bg-slate-300 rounded-[20px] px-4 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none " > start </button>
+                    <button onclick="countDown()" class="p-1 mx-1 text-black text-2xl font-bold bg-pink-100 hover:bg-slate-300 rounded-[20px] px-4 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none " > start </button>
                 </div>
 
                 <div >
-                  <button id="reload" onclick="rotateMe()" > <svg  xmlns="http://www.w3.org/2000/svg"  class="mx-1 hover:fill-slate-300  " height="3em" viewBox="0 0 512 512"><style>svg{fill: rgb(252 231 243)}</style><path d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"/></svg> </button> 
+                  <button id="reload" onclick="reloadMe()" > <svg  xmlns="http://www.w3.org/2000/svg"  class="mx-1 hover:fill-slate-300  " height="3em" viewBox="0 0 512 512"><style>svg{fill: rgb(252 231 243)}</style><path d="M463.5 224H472c13.3 0 24-10.7 24-24V72c0-9.7-5.8-18.5-14.8-22.2s-19.3-1.7-26.2 5.2L413.4 96.6c-87.6-86.5-228.7-86.2-315.8 1c-87.5 87.5-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3c62.2-62.2 162.7-62.5 225.3-1L327 183c-6.9 6.9-8.9 17.2-5.2 26.2s12.5 14.8 22.2 14.8H463.5z"/></svg> </button> 
                 </div>
 
                 <div>

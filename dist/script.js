@@ -1,5 +1,12 @@
-console.log("hello world")
+const footer = document.getElementById("foot"); 
+const fullScreenLogo = document.getElementById("full-screen"); 
 
-const test = document.getElementById('music');
+console.log(footer);
+console.log(fullScreenLogo);
 
-console.log(test);
+const showHidden = () => { 
+    fullScreenLogo.style.display = 'flex'; 
+    
+}; 
+
+footer.addEventListener("mouseover", showHidden());

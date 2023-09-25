@@ -92,7 +92,7 @@ function resumeTimer() {
         isPaused = false;
     }
 
-}
+} 
 
 
 

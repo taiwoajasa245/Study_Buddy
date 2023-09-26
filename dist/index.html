@@ -69,11 +69,11 @@
 
 
     <div id="modal-Grand_parent" class="w-full h-screen bg-b absolute backdrop-blur-sm bg-white/30  bottom-0 left-0 flex items-center justify-center">
-        <div id="modal_parent" class=" w-2/4 h-4/5 bg-black text-black rounded-2xl  ">
+        <div id="modal_parent" class=" w-2/4 h-4/5 bg-black text-white rounded-2xl  ">
             <div id="close-modal" class=" border ">
                 <button> <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg> </button>
             </div>
-            <div class="modal-content border mt-5 h-4/5 ">
+            <div class="modal-content border  h-4/5 m-9 ">
                 <div id="nav_panel">
                     <p>General</p> 
                     <p>Timers</p> 
@@ -81,15 +81,41 @@
                     <p>Account</p> 
                 </div>
                 <div id="plain_panel">
-                    <label for="cars">Select theme:</label>
-                    <select name="cars" id="cars">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
-                    </select>
+                    <div id="select-plain">
+                        <label for="cars">Select theme:</label> <br />
+                        <select name="cars" id="cars" class="w-2/6 bg-black border ">
+                            <option id="forest_view" value="volvo">Forest View</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+
+                    <div id="beta-version">
+                        <div id="switch"></div>
+                        <p> Show browser notification when timer finishes <span class="text-gray-500"> (beta) </span></p>
+                    </div>
+
+                    <div id="spotify_playlist">
+                        <div id="switch_02"></div>
+                        <p> Show Spotify playlist </p>
+                    </div>
+
+                    <div id="quick-msg">
+                        Have feature requests, or an issue to report?Fill out our <a href="#">quick feedback form here</a> and join our <a href="#">Discord Community.</a> <br> 
+                        <span id="little_sm">
+                            <p> StudyBuddy is not realted to the Pomodoro Technique(tm) trademark holder Cirillo Company and respects its trademarks. Pomodoro Technique  and Pomodoro   are registered trademark of Francesco Cirillo. </p>
+                        </span>
+                    </div>
+                    
+                </div> 
+            </div>
+            <div id="close_and_save">
+                <div id="wrapper">
+                    <button class=" border "> Reset All </button>
+                    <button class="border"> Close </button>
+                    <button class="border"> Save changes </button>
                 </div>
-               
             </div>
         </div>
     </div>

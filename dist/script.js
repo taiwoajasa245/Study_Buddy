@@ -69,6 +69,8 @@ function reloadMe() {
     minl = 25;  
     secl = `0`+ 0;
     startBtn.style.display = "block"; 
+    resumeMeBtn.style.display = "none"; 
+    pauseMeBtn.style.display = "none"; 
     min.textContent = minl; 
     sec.textContent = secl; 
 };

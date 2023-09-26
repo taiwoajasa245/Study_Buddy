@@ -117,7 +117,7 @@ resumeMeBtn.addEventListener('click', () =>  {
 /////// settting up the f**k modal
 
 const mainModal = document.querySelector("#modal-Grand_parent"); 
-const closeModal = document.querySelector("#close-modal");
+const closeModal = document.querySelectorAll("#close-modal");
 const openModalButton = document.querySelector('#open_modal')
 
 openModalButton.addEventListener('click', () => {
@@ -125,9 +125,9 @@ openModalButton.addEventListener('click', () => {
 });
 
 
-closeModal.addEventListener('click', () => {
-    mainModal.style.display = "none";
-
-
+closeModal.forEach(e => {
+    e.addEventListener('click', () => {
+        mainModal.style.display = "none"; 
+    });
 });
 

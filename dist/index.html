@@ -68,11 +68,11 @@
     </div>
 
 
-    <div id="modal-Grand_parent" class="w-full h-screen bg-b absolute backdrop-blur-sm bg-white/30  bottom-0 left-0 flex items-center justify-center">
+    <div id="modal-Grand_parent" class="w-full h-screen bg-b absolute backdrop-blur-sm bg-white/30  bottom-0 left-0 flex items-center hidden transition-all justify-center">
         <div id="modal_parent" class=" w-2/4 h-4/5 bg-black text-white rounded-2xl  ">
-            <div id="close-modal" class="  flex justify-between p-3">
+            <div class="  flex justify-between p-3">
                 <div></div>
-                <button > <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg> </button>
+                <button id="close-modal" > <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg> </button>
             </div>
             <div class="modal-content  h-3/4 mx-8 flex justify-around ">
                 <div id="nav_panel" class="font-bold" >
@@ -84,7 +84,7 @@
                 <div id="plain_panel" class="ml-20 text-sm">
                     <div id="select-plain">
                         <label for="cars" class=" font-bold text-base">Select theme:</label> <br />
-                        <select name="cars" id="cars" class="w-2/3 p-1 mt-1 mb-5 rounded-sm bg-black border ">
+                        <select name="cars" id="cars" class="w-3/4 p-2 mt-1 mb-5 rounded-sm bg-black border ">
                             <option id="forest_view" value="volvo">Forest View</option>
                             <option value="saab">Saab</option>
                             <option value="mercedes">Mercedes</option>
@@ -93,7 +93,13 @@
                     </div>
 
                     <div id="beta-version" class="my-2">
-                        <div id="switch"></div>
+                        <div id="switch">
+                            <label class="relative inline-flex items-center cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer" checked>
+                                <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                                <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">Checked toggle</span>
+                            </label>
+                        </div>
                         <p> Show browser notification when timer <br /> finishes <span class="text-red-600"> (beta) </span></p>
                     </div>
 
@@ -104,7 +110,7 @@
 
                     <div id="wrapper" class="text-gray-500 font-semibold text-xs">
                         <div id="quick-msg" class=" mt-6 ">
-                            Have feature requests, or an issue to report?Fill <br /> out our <a href="#" class="text-red-500">quick feedback form here</a> and join our <br /> <a href="#" class="text-red-500 ">Discord Community.</a> <br>
+                            Have feature requests, or an issue to report?Fill <br /> out our <a href="#" class="text-red-500 underline ">quick feedback form here</a> and join our <br /> <a href="#" class="text-red-500 underline">Discord Community.</a> <br>
                         </div>
                         
                         <div id="little_sm" class=" mt-2">

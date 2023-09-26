@@ -94,17 +94,20 @@ function resumeTimer() {
 
 } 
 
+/////// settting up the f**k modal
 
-
-const openModalButton = document.getElementById('open-modal');
-const modal = document.getElementById('modal');
+const mainModal = document.querySelector("#modal-Grand_parent"); 
+const closeModal = document.querySelector("#close-modal");
+const openModalButton = document.querySelector('#open_modal')
 
 openModalButton.addEventListener('click', () => {
-  modal.classList.add('open');
+  mainModal.style.display = "flex"; 
 });
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('open');
-  }
+
+closeModal.addEventListener('click', () => {
+    mainModal.style.display = "none";
+
+
 });
+

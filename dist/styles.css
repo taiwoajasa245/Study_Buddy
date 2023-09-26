@@ -560,6 +560,14 @@ video {
   margin: 2.25rem;
 }
 
+.m-5{
+  margin: 1.25rem;
+}
+
+.m-8{
+  margin: 2rem;
+}
+
 .mx-1{
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -570,8 +578,17 @@ video {
   margin-right: 0.75rem;
 }
 
+.mx-10{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .mt-5{
   margin-top: 1.25rem;
+}
+
+.ml-10{
+  margin-left: 2.5rem;
 }
 
 .block{
@@ -654,6 +671,10 @@ video {
 
 .items-center{
   align-items: center;
+}
+
+.justify-end{
+  justify-content: flex-end;
 }
 
 .justify-center{

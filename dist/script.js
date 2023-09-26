@@ -15,16 +15,14 @@ let interval_01;
 let isPaused = false;
 let minl;  
 let secl;
+
 function countDown() { 
     reload.classList.remove('animate-spin'); 
 
     // reduce minute 
     minl = 25;
     minl -= 1;
-    min.textContent = minl;
-
-    
-  
+    min.textContent = minl;  
 
     // reduce second every 1 second
     secl = 60; 
@@ -87,7 +85,7 @@ function pauseTimer() {
 // Function to resume the interval
 function resumeTimer() {
     if (isPaused) {
-        console.log("hola");
+        console.log(countDown());
         countDown(); 
         isPaused = false;
     }

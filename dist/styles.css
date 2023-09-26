@@ -688,6 +688,14 @@ video {
   margin-left: 0.75rem;
 }
 
+.mr-1{
+  margin-right: 0.25rem;
+}
+
+.mt-3{
+  margin-top: 0.75rem;
+}
+
 .block{
   display: block;
 }
@@ -732,6 +740,10 @@ video {
   height: 1.5rem;
 }
 
+.h-5{
+  height: 1.25rem;
+}
+
 .w-2\/4{
   width: 50%;
 }
@@ -770,6 +782,10 @@ video {
 
 .w-11{
   width: 2.75rem;
+}
+
+.w-9{
+  width: 2.25rem;
 }
 
 .transform{
@@ -1113,14 +1129,29 @@ video {
   top: 0.125rem;
 }
 
+.after\:top-\[2px\]::after{
+  content: var(--tw-content);
+  top: 2px;
+}
+
 .after\:h-5::after{
   content: var(--tw-content);
   height: 1.25rem;
 }
 
+.after\:h-4::after{
+  content: var(--tw-content);
+  height: 1rem;
+}
+
 .after\:w-5::after{
   content: var(--tw-content);
   width: 1.25rem;
+}
+
+.after\:w-4::after{
+  content: var(--tw-content);
+  width: 1rem;
 }
 
 .after\:rounded-full::after{
@@ -1245,6 +1276,11 @@ video {
   content: var(--tw-content);
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.peer:focus ~ .peer-focus\:outline-none{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .peer:focus ~ .peer-focus\:ring-4{

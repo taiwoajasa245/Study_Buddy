@@ -122,6 +122,8 @@ const openModalButton = document.querySelector('#open_modal')
 
 openModalButton.addEventListener('click', () => {
   mainModal.style.display = "flex"; 
+  mainModal.style.opacity = '1'; 
+
 });
 
 

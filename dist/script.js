@@ -93,29 +93,58 @@ const pomodoroTimer = document.getElementById('pomodoro');
 const shortBreak = document.getElementById('short_break'); 
 const longBreak = document.getElementById('long_break'); 
 
+
+
+
+shortBreak.addEventListener('click', () => { 
+    longBreak.style.backgroundColor = 'transparent'; 
+    longBreak.style.color = 'white'; 
+    shortBreak.style.backgroundColor = 'white'; 
+    shortBreak.style.color = 'black'; 
+    pomodoroTimer.style.backgroundColor = 'transparent'; 
+    pomodoroTimer.style.color = 'white';
+
+    pauseTimer()
+    minl = `0${5}`;
+    min.textContent = minl;  
+    secl = 0 + "0"; 
+    sec.textContent = secl; 
+
+})
+pomodoroTimer.addEventListener('click', () => { 
+    longBreak.style.backgroundColor = 'transparent'; 
+    longBreak.style.color = 'white'; 
+    shortBreak.style.backgroundColor = 'transparent'; 
+    shortBreak.style.color = 'white'; 
+    pomodoroTimer.style.backgroundColor = 'white'; 
+    pomodoroTimer.style.color = 'black';
+
+    pauseTimer(); 
+    minl = 25;
+    min.textContent = minl;  
+
+
+})
+
+
 longBreak.addEventListener('click', () => { 
     longBreak.style.backgroundColor = 'white'; 
     longBreak.style.color = 'black'; 
     shortBreak.style.backgroundColor = 'transparent'; 
     shortBreak.style.color = 'white'; 
     pomodoroTimer.style.backgroundColor = 'transparent'; 
-    pomodoroTimer.style.color = 'white'; 
+    pomodoroTimer.style.color = 'white';
+    
+    pauseTimer()
+    minl = 10;
+    secl = 0 + "0"; 
+    sec.textContent = secl; 
+    min.textContent = minl;  
 
-    long_Break(); 
+    
+
+     
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

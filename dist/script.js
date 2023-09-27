@@ -57,9 +57,7 @@ function countDown() {
 
 timer.addEventListener('click', () => { 
     clearInterval(interval_01) 
-    reload.classList.remove('animate-spin'); 
-    
- 
+    reload.classList.remove('animate-spin');  
 }); 
 
 function reloadMe() { 
@@ -76,13 +74,10 @@ function reloadMe() {
 };
 
 function pauseTimer() { 
-   
-    
-        if (interval_01) {
-            clearInterval(interval_01);
-            isPaused = true;
-        }
-    
+    if (interval_01) {
+        clearInterval(interval_01);
+        isPaused = true;
+    }
 }
 
 // Function to resume the interval
@@ -91,8 +86,65 @@ function resumeTimer() {
         isPaused = false;
         startInterval(); 
     }
+}
 
-} 
+
+const pomodoroTimer = document.getElementById('pomodoro'); 
+const shortBreak = document.getElementById('short_break'); 
+const longBreak = document.getElementById('long_break'); 
+
+longBreak.addEventListener('click', () => { 
+    longBreak.style.backgroundColor = 'white'; 
+    longBreak.style.color = 'black'; 
+    shortBreak.style.backgroundColor = 'transparent'; 
+    shortBreak.style.color = 'white'; 
+    pomodoroTimer.style.backgroundColor = 'transparent'; 
+    pomodoroTimer.style.color = 'white'; 
+
+    long_Break(); 
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /// seeting up the sart, pause  and resume button 
 const startBtn = document.getElementById("let's-go"); 
@@ -102,14 +154,17 @@ const resumeMeBtn = document.getElementById('resume-me');
 startBtn.addEventListener('click', () =>  {
     pauseMeBtn.style.display = "block"; 
     startBtn.style.display = "none"; 
+    countDown(); 
 }); 
 pauseMeBtn.addEventListener('click', () =>  {
     pauseMeBtn.style.display = "none";
     resumeMeBtn.style.display = "block"; 
+    pauseTimer(); 
 }); 
 resumeMeBtn.addEventListener('click', () =>  {
     pauseMeBtn.style.display = "block"; 
-    resumeMeBtn.style.display = "none"; 
+    resumeMeBtn.style.display = "none";
+    resumeTimer();  
 }); 
 
 

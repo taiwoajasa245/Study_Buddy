@@ -15,6 +15,8 @@ let interval_01;
 let isPaused = false;
 let minl;  
 let secl;
+let timerType = "pomodoro"; 
+
 
 function startInterval() {
     if (!isPaused) {
@@ -45,7 +47,16 @@ function countDown() {
     reload.classList.remove('animate-spin'); 
 
     // reduce minute 
-    minl = 25;
+    if (timerType === 'pomodoro') { 
+        minl = 25;
+    }else if ( timerType === 'shortbreak' ) { 
+        minl= `0${5}`; 
+        secl = 60; 
+    }else if ( timerType === 'longbreak') { 
+        minl = 10; 
+        secl = 60; 
+    }
+
     minl -= 1;
     min.textContent = minl;  
     // reduce second every 1 second
@@ -61,11 +72,25 @@ timer.addEventListener('click', () => {
 }); 
 
 function reloadMe() { 
+
+    if (timerType === 'pomodoro') { 
+        minl = 25;
+        secl = `0${0}`
+    }else if ( timerType === 'shortbreak' ) { 
+        minl= `0${5}`; 
+        min.textContent = minl;
+        console.log('hello world');
+        secl = `0${0}`; 
+    }else if ( timerType === 'longbreak') { 
+        minl = 10; 
+        secl = `0${0}`; 
+        min.textContent = minl;
+    
+    }
+
     isPaused = false; 
     reload.classList.add('animate-spin'); 
     clearInterval(interval_01)
-    minl = 25;  
-    secl = `0`+ 0;
     startBtn.style.display = "block"; 
     resumeMeBtn.style.display = "none"; 
     pauseMeBtn.style.display = "none"; 
@@ -93,7 +118,11 @@ const pomodoroTimer = document.getElementById('pomodoro');
 const shortBreak = document.getElementById('short_break'); 
 const longBreak = document.getElementById('long_break'); 
 
-
+function mystart(){
+    startBtn.style.display = 'block'; 
+    pauseMeBtn.style.display = 'none'; 
+    resumeMeBtn.style.display = 'none'; 
+}
 
 
 shortBreak.addEventListener('click', () => { 
@@ -103,14 +132,21 @@ shortBreak.addEventListener('click', () => {
     shortBreak.style.color = 'black'; 
     pomodoroTimer.style.backgroundColor = 'transparent'; 
     pomodoroTimer.style.color = 'white';
-
+    
+    mystart(); 
     pauseTimer()
+    
     minl = `0${5}`;
     min.textContent = minl;  
-    secl = 0 + "0"; 
+    secl =`0${0}`; 
     sec.textContent = secl; 
 
+    timerType = 'shortbreak';
+    console.log(timerType);
+
+
 })
+
 pomodoroTimer.addEventListener('click', () => { 
     longBreak.style.backgroundColor = 'transparent'; 
     longBreak.style.color = 'white'; 
@@ -118,11 +154,13 @@ pomodoroTimer.addEventListener('click', () => {
     shortBreak.style.color = 'white'; 
     pomodoroTimer.style.backgroundColor = 'white'; 
     pomodoroTimer.style.color = 'black';
+    
+    mystart(); 
 
     pauseTimer(); 
     minl = 25;
     min.textContent = minl;  
-
+    timerType = 'pomodoro';
 
 })
 
@@ -134,15 +172,62 @@ longBreak.addEventListener('click', () => {
     shortBreak.style.color = 'white'; 
     pomodoroTimer.style.backgroundColor = 'transparent'; 
     pomodoroTimer.style.color = 'white';
+
+    mystart(); 
     
     pauseTimer()
     minl = 10;
     secl = 0 + "0"; 
     sec.textContent = secl; 
     min.textContent = minl;  
+    timerType = 'longbreak';
 
 }); 
 
+
+
+/// seeting up the sart, pause  and resume button 
+const startBtn = document.getElementById("let's-go"); 
+const pauseMeBtn = document.getElementById('pause-me'); 
+const resumeMeBtn = document.getElementById('resume-me'); 
+
+startBtn.addEventListener('click', () =>  {
+    pauseMeBtn.style.display = "block"; 
+    startBtn.style.display = "none"; 
+    countDown(); 
+}); 
+
+
+pauseMeBtn.addEventListener('click', () =>  {
+    pauseMeBtn.style.display = "none";
+    resumeMeBtn.style.display = "block"; 
+    pauseTimer(); 
+}); 
+resumeMeBtn.addEventListener('click', () =>  {
+    pauseMeBtn.style.display = "block"; 
+    resumeMeBtn.style.display = "none";
+    resumeTimer();  
+}); 
+
+
+
+/////// settting up the f**k modal
+
+const mainModal = document.querySelector("#modal-Grand_parent"); 
+const closeModal = document.querySelectorAll("#close-modal");
+const openModalButton = document.querySelector('#open_modal')
+
+openModalButton.addEventListener('click', () => {
+  mainModal.style.display = "flex"; 
+ 
+});
+
+
+closeModal.forEach(e => {
+    e.addEventListener('click', () => {
+        mainModal.style.display = "none"; 
+    });
+});
 
 ////// modal nav bar 
 
@@ -151,7 +236,7 @@ const navTimer = document.querySelector('#nav-timer');
 const navSound = document.querySelector('#nav-sounds');
 const navAccount = document.querySelector('#nav-account');
 let n = 'none'; 
-let b = 'block'
+let b = 'block'; 
 
 /// for the nav General 
 
@@ -162,6 +247,7 @@ function generalNav() {
 }; 
 
 navGeneral.addEventListener('click', () => { generalNav() } ); 
+
 
 
 /// for the nav navTimer 
@@ -206,80 +292,4 @@ function navRed(g, t, s, a) {
     navRedTimer.style.display = t;    
     navRedSound.style.display = s;    
     navRedAccount.style.display = a;    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/// seeting up the sart, pause  and resume button 
-const startBtn = document.getElementById("let's-go"); 
-const pauseMeBtn = document.getElementById('pause-me'); 
-const resumeMeBtn = document.getElementById('resume-me'); 
-
-startBtn.addEventListener('click', () =>  {
-    pauseMeBtn.style.display = "block"; 
-    startBtn.style.display = "none"; 
-    countDown(); 
-}); 
-pauseMeBtn.addEventListener('click', () =>  {
-    pauseMeBtn.style.display = "none";
-    resumeMeBtn.style.display = "block"; 
-    pauseTimer(); 
-}); 
-resumeMeBtn.addEventListener('click', () =>  {
-    pauseMeBtn.style.display = "block"; 
-    resumeMeBtn.style.display = "none";
-    resumeTimer();  
-}); 
-
-
-
-/////// settting up the f**k modal
-
-const mainModal = document.querySelector("#modal-Grand_parent"); 
-const closeModal = document.querySelectorAll("#close-modal");
-const openModalButton = document.querySelector('#open_modal')
-
-openModalButton.addEventListener('click', () => {
-  mainModal.style.display = "flex"; 
-  mainModal.style.opacity = '1'; 
-
-});
-
-
-closeModal.forEach(e => {
-    e.addEventListener('click', () => {
-        mainModal.style.display = "none"; 
-    });
-});
-
+}; 

@@ -971,6 +971,11 @@ video {
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
+.bg-red-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
 .bg-forest-view{
   background-image: url('/dist/img/b4b9101e8cdbad99d7b0.jpg');
 }

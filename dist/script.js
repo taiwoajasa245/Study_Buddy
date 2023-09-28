@@ -140,8 +140,53 @@ longBreak.addEventListener('click', () => {
     secl = 0 + "0"; 
     sec.textContent = secl; 
     min.textContent = minl;  
+
+}); 
+
+
+////// modal nav bar 
+
+const navGeneral = document.querySelector('#nav-general'); 
+const navTimer = document.querySelector('#nav-timer');
+const navSound = document.querySelector('#nav-sounds');
+const navAccount = document.querySelector('#nav-account');
+
+/// for the nav General 
+
+function generalNav() {
     
-})
+}
+
+navGeneral.addEventListener('click', () => {} )
+
+
+/// for the nav navTimer 
+
+function timerNav() {
+    
+}
+
+navTimer.addEventListener('click', () => {} )
+
+
+/// for the nav sounds  
+
+function soundsNav() {
+    
+}
+
+navSound.addEventListener('click', () => { soundsNav()})
+
+
+/// for the nav account
+
+function accountNav() {
+    
+}
+
+navAccount.addEventListener('click', () => {accountNav()}); 
+
+
 
 
 

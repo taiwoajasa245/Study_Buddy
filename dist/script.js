@@ -140,10 +140,7 @@ longBreak.addEventListener('click', () => {
     secl = 0 + "0"; 
     sec.textContent = secl; 
     min.textContent = minl;  
-
     
-
-     
 })
 
 

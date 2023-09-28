@@ -36,25 +36,30 @@ function startInterval() {
             }; 
     
             if (minl < 10 ) { min.textContent = `0${minl}` }
-    
+
+            if (minl <= 0 && secl <= 0) { 
+                clearInterval(interval_01)
+                mystart();  
+            }; 
+      
         }, 1000);
-    
-        if (minl == 0 && secl == 0) { clearInterval(interval_01) }; 
+        
     }
 }
 
 function countDown() { 
     reload.classList.remove('animate-spin'); 
-
+    
     // reduce minute 
     if (timerType === 'pomodoro') { 
         minl = 25;
     }else if ( timerType === 'shortbreak' ) { 
-        minl= `0${5}`; 
-        secl = 60; 
+        minl= `0${5}`;
+        min.textContent = minl;  
+        
     }else if ( timerType === 'longbreak') { 
         minl = 10; 
-        secl = 60; 
+        
     }
 
     minl -= 1;
@@ -68,7 +73,7 @@ function countDown() {
 
 timer.addEventListener('click', () => { 
     clearInterval(interval_01) 
-    reload.classList.remove('animate-spin');  
+    reload.classList.remove('animate-spin');
 }); 
 
 function reloadMe() { 

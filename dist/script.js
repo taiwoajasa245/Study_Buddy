@@ -71,10 +71,11 @@ function countDown() {
     
 }; 
 
-timer.addEventListener('click', () => { 
-    clearInterval(interval_01) 
-    reload.classList.remove('animate-spin');
-}); 
+
+// timer.addEventListener('click', () => { 
+//     clearInterval(interval_01) 
+//     reload.classList.remove('animate-spin');
+// }); 
 
 function reloadMe() { 
 
@@ -111,6 +112,7 @@ function pauseTimer() {
 }
 
 // Function to resume the interval
+
 function resumeTimer() {
     if (isPaused) {
         isPaused = false;
@@ -128,15 +130,22 @@ function mystart(){
     pauseMeBtn.style.display = 'none'; 
     resumeMeBtn.style.display = 'none'; 
 }
+const t = 'transparent'; 
+const w = 'white'; 
+const bl = 'black';
 
+function topBtn(lt, lw, sw, sb, pb, pw) { 
+    longBreak.style.backgroundColor = lt; 
+    longBreak.style.color =  lw; 
+    shortBreak.style.backgroundColor = sw; 
+    shortBreak.style.color = sb; 
+    pomodoroTimer.style.backgroundColor =  pb; 
+    pomodoroTimer.style.color = pw;
+}; 
 
 shortBreak.addEventListener('click', () => { 
-    longBreak.style.backgroundColor = 'transparent'; 
-    longBreak.style.color = 'white'; 
-    shortBreak.style.backgroundColor = 'white'; 
-    shortBreak.style.color = 'black'; 
-    pomodoroTimer.style.backgroundColor = 'transparent'; 
-    pomodoroTimer.style.color = 'white';
+
+    topBtn(t, w, w, bl, t, w); 
     
     mystart(); 
     pauseTimer()
@@ -153,15 +162,9 @@ shortBreak.addEventListener('click', () => {
 })
 
 pomodoroTimer.addEventListener('click', () => { 
-    longBreak.style.backgroundColor = 'transparent'; 
-    longBreak.style.color = 'white'; 
-    shortBreak.style.backgroundColor = 'transparent'; 
-    shortBreak.style.color = 'white'; 
-    pomodoroTimer.style.backgroundColor = 'white'; 
-    pomodoroTimer.style.color = 'black';
-    
-    mystart(); 
 
+    topBtn(t, w, t, w, w, bl); 
+    mystart(); 
     pauseTimer(); 
     minl = 25;
     min.textContent = minl;  
@@ -171,21 +174,16 @@ pomodoroTimer.addEventListener('click', () => {
 
 
 longBreak.addEventListener('click', () => { 
-    longBreak.style.backgroundColor = 'white'; 
-    longBreak.style.color = 'black'; 
-    shortBreak.style.backgroundColor = 'transparent'; 
-    shortBreak.style.color = 'white'; 
-    pomodoroTimer.style.backgroundColor = 'transparent'; 
-    pomodoroTimer.style.color = 'white';
 
-    mystart(); 
-    
     pauseTimer()
     minl = 10;
     secl = 0 + "0"; 
     sec.textContent = secl; 
     min.textContent = minl;  
     timerType = 'longbreak';
+
+    topBtn(w, bl, t, w, t, w)
+    mystart(); 
 
 }); 
 
@@ -291,8 +289,7 @@ function navRed(g, t, s, a) {
     const navRedGeneral = document.querySelector('#nav-red-gen'); 
     const navRedTimer = document.querySelector('#nav-red-time');
     const navRedSound = document.querySelector('#nav-red-sound');
-    const navRedAccount = document.querySelector('#nav-red-acc');
-    
+    const navRedAccount = document.querySelector('#nav-red-acc');   
     navRedGeneral.style.display = g;    
     navRedTimer.style.display = t;    
     navRedSound.style.display = s;    

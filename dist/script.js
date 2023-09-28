@@ -150,41 +150,65 @@ const navGeneral = document.querySelector('#nav-general');
 const navTimer = document.querySelector('#nav-timer');
 const navSound = document.querySelector('#nav-sounds');
 const navAccount = document.querySelector('#nav-account');
+let n = 'none'; 
+let b = 'block'
 
 /// for the nav General 
 
 function generalNav() {
-    
-}
 
-navGeneral.addEventListener('click', () => {} )
+    navRed( b, n, n, n);
+    
+}; 
+
+navGeneral.addEventListener('click', () => { generalNav() } ); 
 
 
 /// for the nav navTimer 
 
 function timerNav() {
-    
-}
 
-navTimer.addEventListener('click', () => {} )
+    navRed( n, b, n, n);
+}; 
+
+navTimer.addEventListener('click', () => { timerNav() } )
 
 
 /// for the nav sounds  
 
 function soundsNav() {
+
     
+    navRed( n, n, b, n);
 }
 
-navSound.addEventListener('click', () => { soundsNav()})
+navSound.addEventListener('click', () => { soundsNav() })
 
 
 /// for the nav account
 
 function accountNav() {
     
+    navRed( n, n, n, b); 
 }
 
 navAccount.addEventListener('click', () => {accountNav()}); 
+
+/// The modal red div in nav function 
+
+function navRed(g, t, s, a) { 
+    const navRedGeneral = document.querySelector('#nav-red-gen'); 
+    const navRedTimer = document.querySelector('#nav-red-time');
+    const navRedSound = document.querySelector('#nav-red-sound');
+    const navRedAccount = document.querySelector('#nav-red-acc');
+    
+    navRedGeneral.style.display = g;    
+    navRedTimer.style.display = t;    
+    navRedSound.style.display = s;    
+    navRedAccount.style.display = a;    
+}
+
+
 
 
 

@@ -51,15 +51,21 @@ function countDown() {
     reload.classList.remove('animate-spin'); 
     
     // reduce minute 
+
     if (timerType === 'pomodoro') { 
         minl = 25;
+        secl = `0${0}`
     }else if ( timerType === 'shortbreak' ) { 
-        minl= `0${5}`;
-        min.textContent = minl;  
-        
+        minl= `0${5}`; 
+        min.textContent = minl;
+        // secl = `0${0}`; 
+        secl = 60; 
+
+      
     }else if ( timerType === 'longbreak') { 
         minl = 10; 
-        
+        min.textContent = minl;
+        secl = `0${0}`; 
     }
 
     minl -= 1;
@@ -81,17 +87,19 @@ function reloadMe() {
 
     if (timerType === 'pomodoro') { 
         minl = 25;
-        secl = `0${0}`
+        secl = `0${0}`; 
+        console.log('hola');
     }else if ( timerType === 'shortbreak' ) { 
         minl= `0${5}`; 
         min.textContent = minl;
-        console.log('hello world');
-        secl = `0${0}`; 
+        secl = 60; 
+        sec.textContent = secl;
+        console.log('bola'); 
     }else if ( timerType === 'longbreak') { 
         minl = 10; 
         secl = `0${0}`; 
         min.textContent = minl;
-    
+        console.log('shola');
     }
 
     isPaused = false; 
@@ -100,6 +108,7 @@ function reloadMe() {
     startBtn.style.display = "block"; 
     resumeMeBtn.style.display = "none"; 
     pauseMeBtn.style.display = "none"; 
+
     min.textContent = minl; 
     sec.textContent = secl; 
 };
@@ -146,7 +155,6 @@ function topBtn(lt, lw, sw, sb, pb, pw) {
 shortBreak.addEventListener('click', () => { 
 
     topBtn(t, w, w, bl, t, w); 
-    
     mystart(); 
     pauseTimer()
     
@@ -155,17 +163,14 @@ shortBreak.addEventListener('click', () => {
     secl =`0${0}`; 
     sec.textContent = secl; 
 
-    timerType = 'shortbreak';
-    console.log(timerType);
-
-
+    timerType = 'shortbreak'; 
 })
 
 pomodoroTimer.addEventListener('click', () => { 
 
     topBtn(t, w, t, w, w, bl); 
     mystart(); 
-    pauseTimer(); 
+    // pauseTimer(); 
     minl = 25;
     min.textContent = minl;  
     timerType = 'pomodoro';

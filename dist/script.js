@@ -24,7 +24,7 @@ function startInterval() {
             // decrement second 
             secl -= 1; 
             sec.textContent = secl;
-    
+            
             if (secl < 10 ) { sec.textContent = `0${secl}` }; 
             
             if (secl < 0) { 
@@ -91,8 +91,8 @@ function reloadMe() {
         console.log('hola');
     }else if ( timerType === 'shortbreak' ) { 
         minl= `0${5}`; 
+        secl = `0${0}`; 
         min.textContent = minl;
-        secl = 60; 
         sec.textContent = secl;
         console.log('bola'); 
     }else if ( timerType === 'longbreak') { 
@@ -103,8 +103,8 @@ function reloadMe() {
     }
 
     isPaused = false; 
-    reload.classList.add('animate-spin'); 
     clearInterval(interval_01)
+    reload.classList.add('animate-spin'); 
     startBtn.style.display = "block"; 
     resumeMeBtn.style.display = "none"; 
     pauseMeBtn.style.display = "none"; 
@@ -157,6 +157,8 @@ shortBreak.addEventListener('click', () => {
     topBtn(t, w, w, bl, t, w); 
     mystart(); 
     pauseTimer()
+    isPaused = false; 
+    clearInterval(interval_01)
     
     minl = `0${5}`;
     min.textContent = minl;  
@@ -181,6 +183,9 @@ pomodoroTimer.addEventListener('click', () => {
 longBreak.addEventListener('click', () => { 
 
     pauseTimer()
+    isPaused = false; 
+    clearInterval(interval_01)
+    
     minl = 10;
     secl = 0 + "0"; 
     sec.textContent = secl; 

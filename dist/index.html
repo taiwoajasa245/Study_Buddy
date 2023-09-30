@@ -12,6 +12,38 @@
     <title>StudyBuddy</title>
 </head>
 
+<style>
+    .range-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width:  16px; /* Set the width of the thumb */
+      height:  16px; /* Set the height of the thumb */
+      background: #Ffff; /* Set the color of the thumb */
+      border: 2px solid white; /* Add a border to the thumb */
+      border-radius: 50%; /* Make the thumb round */
+      cursor: pointer; /* Change the cursor to a pointer on hover */
+    }
+
+    .range-slider::-moz-range-thumb {
+      width: 16px;
+      height:  16px;
+      background: white;
+      border: 2px solid #ffff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .range-slider::-ms-thumb {
+      width:  16px;
+      height:  16px;
+      background: #Ffff;
+      border: 2px solid #Ffff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+</style>
+
+
 <body class="text-pink-100 bg-forest-view font-document ">
     
     <div id="allsection" class="w-full h-screen px-4rem relative ">
@@ -74,10 +106,10 @@
                 <div></div>
                 <button id="close-modal" > <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg> </button>
             </div>
-            <div class="modal-content  h-3/4 mx-8 flex justify-around ">
+            <div class="modal-content   h-3/4 mx-8 flex justify-around ">
                 <div id="nav_panel" class="font-bold" >
                     <span id="nav-red-gen" class="absolute w-1 h-4 rounded-sm left-[21.5rem] mt-1 bg-red-600 "> </span>
-                    <p id="nav-general" class=" relative cursor-pointer transition ">General</p> 
+                    <p id="nav-general" class="relative cursor-pointer transition ">General</p> 
                     
                     <span id="nav-red-time" class="absolute w-1 h-4 rounded-sm left-[21.5rem] mt-1 bg-red-600 hidden "> </span>
                     <p id="nav-timer" class="mt-1 relative cursor-pointer transition-all ">Timers</p> 
@@ -88,10 +120,12 @@
                     <span id="nav-red-acc" class="absolute w-1 h-4 rounded-sm left-[21.5rem] mt-1 bg-red-600 hidden "> </span>
                     <p id="nav-account" class="mt-1  relative cursor-pointer ">Account</p> 
                 </div>
-                <div id="plain_panel" class="ml-20 text-sm">
+
+
+                <div id="plain_panel"  class="ml-20 text-sm">
                     <div id="select-plain">
                         <label for="cars" class=" font-bold text-base">Select theme:</label> <br />
-                        <select name="cars" id="cars" class="w-3/4 p-2 mt-1 mb-5 rounded-sm bg-black border ">
+                        <select name="cars" id="cars" class="w-full p-2 mt-1 mb-5 rounded-sm bg-black border ">
                             <option id="forest_view" value="volvo">Forest View</option>
                             <option value="saab">Saab</option>
                             <option value="mercedes">Mercedes</option>
@@ -130,6 +164,43 @@
                     </div>
 
                 </div> 
+                
+                <div id="sounds" class="hidden">
+                    <div id="select-plain">
+                        <label for="cars" class=" font-bold text-base">Select theme:</label> <br />
+                        <select name="cars" id="cars" class="w-full p-2 mt-1 mb-5 rounded-sm bg-black border ">
+                            <option id="forest_view" value="volvo">Forest View</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+
+                    <div id="spotify_playlist" class="my-4 flex  ">
+                        <div id="switch_02">
+                            <label class="relative inline-flex items-center mb-5 cursor-pointer">
+                                <input type="checkbox" value="" class="sr-only peer">
+                                <div class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                            </label>
+                        </div>
+                        <p class="ml-1"> Play sound when timer finishes </p> 
+                    </div>
+
+                    <div id="alert-volume">
+                        <p class="font-bold">Alert volume</p> 
+                        <div id="volume">
+                            <input type="range" name="alert-volume" min="0" max="100" id="volume" class="range-slider w-full appearance-none bg-gray-200  rounded-full h-[.5rem] m-2 outline-none">
+                        </div>
+<!-- 
+                        <div class="w-1/2 mx-auto">
+                            <input type="range" id="myRange" class="range-slider bg-gray-300 appearance-none w-full h-3 rounded-full outline-none">
+                        </div>                           -->
+                    </div>
+
+
+                </div>
+
+
     
             </div>
             <div id="close_and_save" class=" mx-8 ">

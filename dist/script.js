@@ -115,6 +115,7 @@ function reloadMe() {
 
 function pauseTimer() { 
     if (interval_01) {
+        reload.classList.remove('animate-spin');
         clearInterval(interval_01);
         isPaused = true;
     }
@@ -124,6 +125,7 @@ function pauseTimer() {
 
 function resumeTimer() {
     if (isPaused) {
+        reload.classList.remove('animate-spin');
         isPaused = false;
         startInterval(); 
     }
@@ -185,7 +187,7 @@ longBreak.addEventListener('click', () => {
     pauseTimer()
     isPaused = false; 
     clearInterval(interval_01)
-    
+
     minl = 10;
     secl = 0 + "0"; 
     sec.textContent = secl; 
@@ -248,12 +250,17 @@ const navGeneral = document.querySelector('#nav-general');
 const navTimer = document.querySelector('#nav-timer');
 const navSound = document.querySelector('#nav-sounds');
 const navAccount = document.querySelector('#nav-account');
+
+const sund = document.getElementById('sounds'); 
+const gen = document.getElementById('plain_panel'); 
 let n = 'none'; 
 let b = 'block'; 
 
 /// for the nav General 
 
 function generalNav() {
+    gen.style.display = b; 
+    sund.style.display = n; 
 
     navRed( b, n, n, n);
     
@@ -276,8 +283,8 @@ navTimer.addEventListener('click', () => { timerNav() } )
 /// for the nav sounds  
 
 function soundsNav() {
-
-    
+    gen.style.display = n; 
+    sund.style.display = b; 
     navRed( n, n, b, n);
 }
 

@@ -251,8 +251,11 @@ const navTimer = document.querySelector('#nav-timer');
 const navSound = document.querySelector('#nav-sounds');
 const navAccount = document.querySelector('#nav-account');
 
-const sund = document.getElementById('sounds'); 
-const gen = document.getElementById('plain_panel'); 
+const plainSound = document.getElementById('plain_sounds'); 
+const plainTimer = document.getElementById('plain_timer'); 
+const plainGeneral = document.getElementById('plain_panel'); 
+const plain_account = document.getElementById('plain_account'); 
+
 let n = 'none'; 
 let b = 'block'; 
 

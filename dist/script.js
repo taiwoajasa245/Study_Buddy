@@ -1,3 +1,5 @@
+// import show from "./show_hide";
+
 const footer = document.getElementById("foot"); 
 const fullScreenLogo = document.getElementById("full-screen"); 
 const reload = document.getElementById('reload'); 
@@ -262,8 +264,8 @@ let b = 'block';
 /// for the nav General 
 
 function generalNav() {
-    gen.style.display = b; 
-    sund.style.display = n; 
+    plainGeneral.style.display = b; 
+    plainSound.style.display = n; 
 
     navRed( b, n, n, n);
     
@@ -286,8 +288,9 @@ navTimer.addEventListener('click', () => { timerNav() } )
 /// for the nav sounds  
 
 function soundsNav() {
-    gen.style.display = n; 
-    sund.style.display = b; 
+    plainGeneral.style.display = n; 
+    plainSound.style.display = b; 
+    // show(plainSound); 
     navRed( n, n, b, n);
 }
 
@@ -315,3 +318,16 @@ function navRed(g, t, s, a) {
     navRedSound.style.display = s;    
     navRedAccount.style.display = a;    
 }; 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -252,24 +252,33 @@ const navGeneral = document.querySelector('#nav-general');
 const navTimer = document.querySelector('#nav-timer');
 const navSound = document.querySelector('#nav-sounds');
 const navAccount = document.querySelector('#nav-account');
-
-const plainSound = document.getElementById('plain_sounds'); 
-const plainTimer = document.getElementById('plain_timer'); 
-const plainGeneral = document.getElementById('plain_panel'); 
-const plain_account = document.getElementById('plain_account'); 
-
 let n = 'none'; 
 let b = 'block'; 
+
+function navPlain(g, t, s, a) { 
+    const plainSound = document.getElementById('plain_sounds');    
+    const plainTimer = document.getElementById('plain_timer'); 
+    const plainGeneral = document.getElementById('plain_panel'); 
+    const plainAccount = document.getElementById('plain_account'); 
+
+    plainGeneral.style.display = g; 
+    plainTimer.style.display = t; 
+    plainSound.style.display = s; 
+    plainAccount.style.display = a; 
+}
+
+
+
 
 /// for the nav General 
 
 function generalNav() {
-    plainGeneral.style.display = b; 
-    plainSound.style.display = n; 
 
-    navRed( b, n, n, n);
+
     
-}; 
+    navPlain( b, n, n, n);
+    
+};     
 
 navGeneral.addEventListener('click', () => { generalNav() } ); 
 
@@ -279,8 +288,9 @@ navGeneral.addEventListener('click', () => { generalNav() } );
 
 function timerNav() {
 
-    navRed( n, b, n, n);
-}; 
+    
+    navPlain( n, b, n, n);
+};     
 
 navTimer.addEventListener('click', () => { timerNav() } )
 
@@ -288,11 +298,10 @@ navTimer.addEventListener('click', () => { timerNav() } )
 /// for the nav sounds  
 
 function soundsNav() {
-    plainGeneral.style.display = n; 
-    plainSound.style.display = b; 
-    // show(plainSound); 
-    navRed( n, n, b, n);
-}
+
+    
+    navPlain( n, n, b, n);
+}    
 
 navSound.addEventListener('click', () => { soundsNav() })
 
@@ -300,24 +309,15 @@ navSound.addEventListener('click', () => { soundsNav() })
 /// for the nav account
 
 function accountNav() {
+
+    console.log('hola   ');
     
-    navRed( n, n, n, b); 
-}
+    navPlain( n, n, n, b); 
+}    
 
 navAccount.addEventListener('click', () => {accountNav()}); 
 
-/// The modal red div in nav function 
-
-function navRed(g, t, s, a) { 
-    const navRedGeneral = document.querySelector('#nav-red-gen'); 
-    const navRedTimer = document.querySelector('#nav-red-time');
-    const navRedSound = document.querySelector('#nav-red-sound');
-    const navRedAccount = document.querySelector('#nav-red-acc');   
-    navRedGeneral.style.display = g;    
-    navRedTimer.style.display = t;    
-    navRedSound.style.display = s;    
-    navRedAccount.style.display = a;    
-}; 
+    
 
 
 

@@ -63,7 +63,7 @@ This project is licensed under the [insert-license-here] License. See the [LICEN
 If you have questions, suggestions, or feedback about StudyBuddy, please feel free to reach out to us:
 
 - Email: [ajasataiwo24@example.com]
-<!-- - Website: [insert-website-link]
-- Twitter: [insert-twitter-link] -->
+<!-- - Website: [insert-website-link] -->
+- Twitter: [@Tech_With_Taiwo]
 
 Thank you for choosing StudyBuddy to enhance your study sessions! Stay focused and productive.

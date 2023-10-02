@@ -1,6 +1,6 @@
 # StudyBuddy - Customizable Study Timer
 
-![StudyBuddy Background](\img\logo.png)
+![StudyBuddy Background](/icon/logo.png)
 
 ## Introduction
 

@@ -271,51 +271,15 @@ function navPlain(g, t, s, a) {
 
 
 /// for the nav General 
-
-function generalNav() {
-
-
-    
-    navPlain( b, n, n, n);
-    
-};     
-
-navGeneral.addEventListener('click', () => { generalNav() } ); 
-
-
-
+navGeneral.addEventListener('click', () => { navPlain( b, n, n, n) } ); 
 /// for the nav navTimer 
+navTimer.addEventListener('click', () => { navPlain( n, b, n, n)  } )
 
-function timerNav() {
+/// for the nav sounds    
+navSound.addEventListener('click', () => {  navPlain( n, n, b, n)  })
 
-    
-    navPlain( n, b, n, n);
-};     
-
-navTimer.addEventListener('click', () => { timerNav() } )
-
-
-/// for the nav sounds  
-
-function soundsNav() {
-
-    
-    navPlain( n, n, b, n);
-}    
-
-navSound.addEventListener('click', () => { soundsNav() })
-
-
-/// for the nav account
-
-function accountNav() {
-
-    console.log('hola   ');
-    
-    navPlain( n, n, n, b); 
-}    
-
-navAccount.addEventListener('click', () => {accountNav()}); 
+/// for the nav account 
+navAccount.addEventListener('click', () => { navPlain( n, n, n, b) }); 
 
     
 

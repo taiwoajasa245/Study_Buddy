@@ -6,9 +6,29 @@ const reload = document.getElementById('reload');
 const timer = document.getElementById('timer'); 
 
 
-const showHidden = () => { fullScreenLogo.style.display = 'block';}; 
+const showHidden = () => { fullScreenLogo.style.display = 'block'}; 
 function hideEle() { fullScreenLogo.style.display = "none" }; 
+footer.addEventListener('mouseover', () => { showHidden() }); 
+footer.addEventListener('mouseout', () => { hideEle() }); 
 
+
+
+
+// Function to toggle fullscreen
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch((err) => {
+      console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+    });
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+
+// Add a click event listener to the button
+fullScreenLogo.addEventListener("click", toggleFullScreen);
 
 
 let min = document.getElementById('min'); 

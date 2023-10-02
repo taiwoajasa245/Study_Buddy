@@ -11,6 +11,7 @@ module.exports = {
       }, 
       backgroundImage: {
         'forest-view': "url('/dist/img/b4b9101e8cdbad99d7b0.jpg')", 
+        'black-wave': "url('/dist/img/black Wave.webp')", 
       }, 
       animation: {
         'spin': 'spin .5s linear 1',

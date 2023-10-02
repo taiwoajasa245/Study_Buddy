@@ -56,7 +56,7 @@
 </style>
 
 
-<body class="text-pink-100 bg-forest-view font-document ">
+<body class="text-pink-100 bg-black-wave bg-cover font-document ">
     
     <div id="allsection" class="w-full h-screen px-4rem relative ">
         <header class=" ">
@@ -65,7 +65,7 @@
                     <img src="img/logo.png" class="w-[30rem] " alt="website logo">
                 </a>
             </div>
-        </header>       
+        </header>      
 
 
         <main class=" px-10 py-5  flex flex-col justify-evenly   items-center ">
@@ -129,12 +129,17 @@
 
                 <div id="plain_panel"  class="ml-20 text-sm">
                     <div id="select-plain">
-                        <label for="cars" class=" font-bold text-base">Select theme:</label> <br />
-                        <select name="cars" id="cars" class="w-full p-2 mt-1 mb-5 rounded-sm bg-black border ">
-                            <option id="forest_view" value="volvo">Forest View</option>
-                            <option value="saab">Saab</option>
-                            <option value="mercedes">Mercedes</option>
-                            <option value="audi">Audi</option>
+                        <label for="background" class=" font-bold text-base">Select theme:</label> <br />
+                        <select name="background" id="background" class="w-full p-2 mt-1 mb-5 rounded-sm bg-black border ">
+                            <option id="londonView" value="londonView">London View</option>
+                            <option id="forest_view" value="forestView">Forest View</option>
+                            <option value="StreetView">Street View </option>
+                            <option value="firePlace">Fire Place</option>
+                            <option value="blackSandView">Black Sand</option>
+                            <option value="cityView">City View</option>
+                            <option value="iceLand">Iceland</option>
+                            <option value="waterDrop">Water Drop</option>
+
                         </select>
                     </div>
 
@@ -174,19 +179,19 @@
                     <div id="select-timers" class="flex justify-around">
                         <div id="pomodro-div">
                             <label for="number" class=" font-bold text-base">Pomodoro</label> <br>
-                            <input type="number" name="number" value="25" id="pomodoro-number" class="  w-24 p-2 mt-1 mb-1 rounded-md bg-black border " >
+                            <input type="number" name="number" value="25" maxlength="5" id="pomodoro-number" class="  w-24 p-2 mt-1 mb-1 rounded-md bg-black border " >
                             <p class="text-gray-500 font-bold ">minutes</p>
                         </div>
 
                         <div id="short-break-div" class="px-5">
                             <label for="num" class=" font-bold text-base">Short Break</label> <br>
-                            <input type="number" name="num" value="5" id="pomodoro-number" class=" w-24 p-2 mt-1 mb-1 rounded-md bg-black border ">
+                            <input type="number" name="num" value="5" id="pomodoro-number" maxlength="5" class=" w-24 p-2 mt-1 mb-1 rounded-md bg-black border ">
                             <p class="text-gray-500 font-bold">minutes</p>
                         </div>
                         
                         <div id="long-break-div" class="">
                             <label for="num" class=" font-bold text-base">Long Break</label> <br>
-                            <input type="number" name="num" value="10" id="pomodoro-number" class=" w-24 p-2 mt-1 mb-1 rounded-md bg-black border ">
+                            <input type="number" name="num" value="10" id="pomodoro-number" maxlength="2" class=" w-24 p-2 mt-1 mb-1 rounded-md bg-black border ">
                             <p class="text-gray-500 font-bold">minutes</p>
                         </div>
                         

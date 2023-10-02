@@ -52,6 +52,7 @@ function startInterval() {
 function countDown() { 
     reload.classList.remove('animate-spin'); 
     
+    
     // reduce minute 
 
     if (timerType === 'pomodoro') { 
@@ -280,6 +281,54 @@ navSound.addEventListener('click', () => {  navPlain( n, n, b, n)  })
 
 /// for the nav account 
 navAccount.addEventListener('click', () => { navPlain( n, n, n, b) }); 
+
+
+/// working on the  bg image
+
+
+const imageBackground  = { 
+    forestView:"url('/dist/img/b4b9101e8cdbad99d7b0.jpg')", 
+    londonView:"url('/dist/img/5d8df2971a0ff103dd00.jpg')", 
+    StreetView:"url('/dist/img/8d2f0e9db9ad4a5860cd.jpg')", 
+    firePlace:"url('/dist/img/a51c12e2c3db9cc34735.jpg')", 
+    blackSandView:"url('/dist/img/blackSand.jpg')", 
+    cityView:"url('/dist/img/c629a813b3561cfa40dd.jpg')", 
+    iceLand:"url('/dist/img/f1cb6ebed3e6941bc76a.jpg')", 
+    waterDrop:"url('/dist/img/pexels-francesco-ungaro-396547.jpg')", 
+    
+    
+}
+
+window.addEventListener('click', () => { 
+
+document.body.style.backgroundImage = imageBackground.waterDrop; 
+
+
+}); 
+
+const back = document.getElementById('background'); 
+// const fr = document.getElementById('londonView'); 
+// console.log(fr);
+
+// fr.addEventListener('click', () => { 
+//     console.log(backVal);
+//     if (backVal === "forestView") {
+//         console.log('helloaldfj;alsdk'); 
+//     }
+// }); 
+
+let backVal = back.value; 
+console.log(backVal);
+function changeBg() { 
+
+    if (backVal === 'forestView' ) {
+        console.log('hello World');
+    }
+    
+}
+changeBg(); 
+
+
 
     
 

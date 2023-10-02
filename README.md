@@ -62,7 +62,7 @@ This project is licensed under the [insert-license-here] License. See the [LICEN
 
 If you have questions, suggestions, or feedback about StudyBuddy, please feel free to reach out to us:
 
-- Email: [ajasataiwo24@example.com]
+- Email: [ajasataiwo24@gmail.com]
 <!-- - Website: [insert-website-link] -->
 - Twitter: [@Tech_With_Taiwo]
 

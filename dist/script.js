@@ -1,4 +1,4 @@
-// import show from "./show_hide";
+import backChange from "./app.js";
 
 const footer = document.getElementById("foot"); 
 const fullScreenLogo = document.getElementById("full-screen"); 
@@ -86,35 +86,40 @@ function countDown() {
 //     reload.classList.remove('animate-spin');
 // }); 
 
-function reloadMe() { 
+reload.addEventListener('click', () => { 
 
-    if (timerType === 'pomodoro') { 
-        minl = 25;
-        secl = `0${0}`; 
-        console.log('hola');
-    }else if ( timerType === 'shortbreak' ) { 
-        minl= `0${5}`; 
-        secl = `0${0}`; 
-        min.textContent = minl;
-        sec.textContent = secl;
-        console.log('bola'); 
-    }else if ( timerType === 'longbreak') { 
-        minl = 10; 
-        secl = `0${0}`; 
-        min.textContent = minl;
-        console.log('shola');
-    }
+    function reloadMe() { 
+    
+        if (timerType === 'pomodoro') { 
+            minl = 25;
+            secl = `0${0}`; 
+            
+        }else if ( timerType === 'shortbreak' ) { 
+            minl= `0${5}`; 
+            secl = `0${0}`; 
+            min.textContent = minl;
+            sec.textContent = secl;
+            
+        }else if ( timerType === 'longbreak') { 
+            minl = 10; 
+            secl = `0${0}`; 
+            min.textContent = minl;
+            
+        }
+    
+        isPaused = false; 
+        clearInterval(interval_01)
+        reload.classList.add('animate-spin'); 
+        startBtn.style.display = "block"; 
+        resumeMeBtn.style.display = "none"; 
+        pauseMeBtn.style.display = "none"; 
+    
+        min.textContent = minl; 
+        sec.textContent = secl; 
+    };
+    reloadMe()
+})
 
-    isPaused = false; 
-    clearInterval(interval_01)
-    reload.classList.add('animate-spin'); 
-    startBtn.style.display = "block"; 
-    resumeMeBtn.style.display = "none"; 
-    pauseMeBtn.style.display = "none"; 
-
-    min.textContent = minl; 
-    sec.textContent = secl; 
-};
 
 function pauseTimer() { 
     if (interval_01) {
@@ -203,7 +208,6 @@ longBreak.addEventListener('click', () => {
 }); 
 
 
-
 /// seeting up the sart, pause  and resume button 
 const startBtn = document.getElementById("let's-go"); 
 const pauseMeBtn = document.getElementById('pause-me'); 
@@ -215,7 +219,6 @@ startBtn.addEventListener('click', () =>  {
     countDown(); 
 }); 
 
-
 pauseMeBtn.addEventListener('click', () =>  {
     pauseMeBtn.style.display = "none";
     resumeMeBtn.style.display = "block"; 
@@ -226,121 +229,5 @@ resumeMeBtn.addEventListener('click', () =>  {
     resumeMeBtn.style.display = "none";
     resumeTimer();  
 }); 
-
-
-
-/////// settting up the f**k modal
-
-const mainModal = document.querySelector("#modal-Grand_parent"); 
-const closeModal = document.querySelectorAll("#close-modal");
-const openModalButton = document.querySelector('#open_modal')
-
-openModalButton.addEventListener('click', () => {
-  mainModal.style.display = "flex"; 
- 
-});
-
-
-closeModal.forEach(e => {
-    e.addEventListener('click', () => {
-        mainModal.style.display = "none"; 
-    });
-});
-
-////// modal nav bar 
-
-const navGeneral = document.querySelector('#nav-general'); 
-const navTimer = document.querySelector('#nav-timer');
-const navSound = document.querySelector('#nav-sounds');
-const navAccount = document.querySelector('#nav-account');
-let n = 'none'; 
-let b = 'block'; 
-
-function navPlain(g, t, s, a) { 
-    const plainSound = document.getElementById('plain_sounds');    
-    const plainTimer = document.getElementById('plain_timer'); 
-    const plainGeneral = document.getElementById('plain_panel'); 
-    const plainAccount = document.getElementById('plain_account'); 
-
-    plainGeneral.style.display = g; 
-    plainTimer.style.display = t; 
-    plainSound.style.display = s; 
-    plainAccount.style.display = a; 
-}
-
-
-
-
-/// for the nav General 
-navGeneral.addEventListener('click', () => { navPlain( b, n, n, n) } ); 
-/// for the nav navTimer 
-navTimer.addEventListener('click', () => { navPlain( n, b, n, n)  } )
-
-/// for the nav sounds    
-navSound.addEventListener('click', () => {  navPlain( n, n, b, n)  })
-
-/// for the nav account 
-navAccount.addEventListener('click', () => { navPlain( n, n, n, b) }); 
-
-
-/// working on the  bg image
-
-
-const imageBackground  = { 
-    forestView:"url('/dist/img/b4b9101e8cdbad99d7b0.jpg')", 
-    londonView:"url('/dist/img/5d8df2971a0ff103dd00.jpg')", 
-    StreetView:"url('/dist/img/8d2f0e9db9ad4a5860cd.jpg')", 
-    firePlace:"url('/dist/img/a51c12e2c3db9cc34735.jpg')", 
-    blackSandView:"url('/dist/img/blackSand.jpg')", 
-    cityView:"url('/dist/img/c629a813b3561cfa40dd.jpg')", 
-    iceLand:"url('/dist/img/f1cb6ebed3e6941bc76a.jpg')", 
-    waterDrop:"url('/dist/img/pexels-francesco-ungaro-396547.jpg')", 
-    
-    
-}
-
-window.addEventListener('click', () => { 
-
-document.body.style.backgroundImage = imageBackground.waterDrop; 
-
-
-}); 
-
-const back = document.getElementById('background'); 
-// const fr = document.getElementById('londonView'); 
-// console.log(fr);
-
-// fr.addEventListener('click', () => { 
-//     console.log(backVal);
-//     if (backVal === "forestView") {
-//         console.log('helloaldfj;alsdk'); 
-//     }
-// }); 
-
-let backVal = back.value; 
-console.log(backVal);
-function changeBg() { 
-
-    if (backVal === 'forestView' ) {
-        console.log('hello World');
-    }
-    
-}
-changeBg(); 
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
 
 

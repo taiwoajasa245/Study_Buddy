@@ -1,5 +1,3 @@
-
-
 ////// modal nav bar 
 
 const navGeneral = document.querySelector('#nav-general'); 
@@ -21,7 +19,6 @@ function navPlain(g, t, s, a) {
     plainAccount.style.display = a; 
 }
 
-
 /// for the nav General 
 navGeneral.addEventListener('click', () => { navPlain( b, n, n, n) } ); 
 /// for the nav navTimer 
@@ -32,11 +29,6 @@ navSound.addEventListener('click', () => {  navPlain( n, n, b, n)  })
 
 /// for the nav account 
 navAccount.addEventListener('click', () => { navPlain( n, n, n, b) }); 
-
-
-
-
-
 
 ///// settting up the f**k modal
 

@@ -195,8 +195,9 @@ shortBreak.addEventListener('click', () => {
     secl =`0${0}`; 
     sec.textContent = secl; 
 
+
     timerType = 'shortbreak'; 
-})
+}); 
 
 pomodoroTimer.addEventListener('click', () => { 
 
@@ -207,7 +208,7 @@ pomodoroTimer.addEventListener('click', () => {
     min.textContent = minl;  
     timerType = 'pomodoro';
 
-})
+}); 
 
 
 longBreak.addEventListener('click', () => { 
@@ -249,5 +250,46 @@ resumeMeBtn.addEventListener('click', () =>  {
     resumeMeBtn.style.display = "none";
     resumeTimer();  
 }); 
+
+
+// settings navigation timer 
+
+const pomodoroInputTimer = document.getElementById('pomodoro-input-timer'); 
+const shortBreakInputTimer = document.getElementById('shortbreak-input-timer'); 
+const longBreakInputTimer = document.getElementById('longbreak-input-timer'); 
+const saveChangesButton = document.getElementById('save-changes-btn'); 
+
+
+saveChangesButton.addEventListener('click', () => { 
+
+    const pomodoroValue = pomodoroInputTimer.value; 
+    const longBreakValue = longBreakInputTimer.value; 
+    const shortbreakValue = shortBreakInputTimer.value; 
+    const mainModal = document.querySelector("#modal-Grand_parent"); 
+    
+
+    console.log('hola');
+    
+    if (timerType === 'pomodoro') { 
+        minl = Number(pomodoroValue);
+        secl = `0${0}`; 
+        
+    }else if ( timerType === 'shortbreak' ) { 
+        minl= Number(shortbreakValue); 
+        secl = `0${0}`; 
+        min.textContent = minl;
+        sec.textContent = secl;
+        
+    }else if ( timerType === 'longbreak') { 
+        minl = Number(longBreakValue); 
+        secl = `0${0}`; 
+        min.textContent = minl; 
+    }
+
+    sec.textContent = secl; 
+    min.textContent = minl; 
+    mainModal.style.display = "none"; 
+})
+
 
 

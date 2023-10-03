@@ -42,9 +42,10 @@ openModalButton.addEventListener('click', () => {
 });
 
 
+
 closeModal.forEach(e => {
-    e.addEventListener('click', () => {
-        mainModal.style.display = "none"; 
+    e.addEventListener('click', () =>  {
+        mainModal.style.display = "none";                   
     });
 });
 

@@ -67,6 +67,7 @@ const imageBackground  = {
 
 const changeBackground = document.getElementById('background'); 
 changeBackground.addEventListener("change", function() {
+    
     // Get the selected option's value
     var selectedOption = this.value; 
     
@@ -110,8 +111,6 @@ changeBackground.addEventListener("change", function() {
             console.error('no option clicked ')
     }
 });
-
-
 
 
 

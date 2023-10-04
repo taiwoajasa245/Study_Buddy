@@ -3,7 +3,10 @@ import backChange from "./app.js";
 const footer = document.getElementById("foot"); 
 const fullScreenLogo = document.getElementById("full-screen"); 
 const reload = document.getElementById('reload'); 
-const timer = document.getElementById('timer'); 
+const imageLogo = document.getElementById('image-logo'); 
+
+
+
 
 
 const showHidden = () => { fullScreenLogo.style.display = 'block'}; 
@@ -16,31 +19,26 @@ footer.addEventListener('mouseout', () => { hideEle() });
 
 // Function to toggle fullscreen
 function toggleFullScreen() {
+
   if (!document.fullscreenElement) {
     footer.style.marginTop = '10rem';
+    imageLogo.style.width = '25rem';
     document.documentElement.requestFullscreen().catch((err) => {
       console.error(`Error attempting to enable full-screen mode: ${err.message}`);
     });
   } else {
     footer.style.marginTop = '3.5rem';
+    imageLogo.style.width = '20rem';
     if (document.exitFullscreen) {
       document.exitFullscreen();
     }
   }
 }; 
-/// Style footer when fullscreen is activated 
-
-// const isFullScreen = document.fullscreenElement !== null;
-
-// if (isFullScreen) {
-//     footer.style.backgroundColor = 'blue';
-// } else {
-//     footer.style.backgroundColor = 'red';
-// }
 
 // Add a click event listener to the button
 fullScreenLogo.addEventListener("click", toggleFullScreen);
 
+// timer variable
 
 let min = document.getElementById('min'); 
 let sec = document.getElementById('sec');

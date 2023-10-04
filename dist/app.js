@@ -110,4 +110,13 @@ changeBackground.addEventListener("change", function() {
             console.error('no option clicked ')
     }
 });
+
+/// Style footer when fullscreen is activated 
+
+const isFullScreen = document.fullscreenElement !== null;
+const divToStyle = document.querySelector('#yourDivId');
+
+
+
+
 export default backChange; 

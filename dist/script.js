@@ -37,6 +37,7 @@ let interval_01;
 let isPaused = false;
 let minl;  
 let secl;
+let staticTimer; 
 let timerType = "pomodoro"; 
 
 
@@ -78,17 +79,21 @@ function countDown() {
     if (timerType === 'pomodoro') { 
         minl = 25;
         secl = `0${0}`
+        staticTimer = 'pomo'; 
     }else if ( timerType === 'shortbreak' ) { 
         minl= `0${5}`; 
         min.textContent = minl;
         // secl = `0${0}`; 
         secl = 60; 
 
+        staticTimer = 'short'
+
       
     }else if ( timerType === 'longbreak') { 
         minl = 10; 
         min.textContent = minl;
         secl = `0${0}`; 
+        staticTimer = 'long'
     }
 
     minl -= 1;
@@ -113,17 +118,20 @@ reload.addEventListener('click', () => {
         if (timerType === 'pomodoro') { 
             minl = 25;
             secl = `0${0}`; 
-            
+            staticTimer = 'pomo'
+
         }else if ( timerType === 'shortbreak' ) { 
             minl= `0${5}`; 
             secl = `0${0}`; 
             min.textContent = minl;
             sec.textContent = secl;
+            staticTimer = 'short'
             
         }else if ( timerType === 'longbreak') { 
             minl = 10; 
             secl = `0${0}`; 
             min.textContent = minl;
+            staticTimer = 'long'
             
         }
     
@@ -182,42 +190,52 @@ function topBtn(lt, lw, sw, sb, pb, pw) {
     pomodoroTimer.style.color = pw;
 }; 
 
-shortBreak.addEventListener('click', () => { 
+pomodoroTimer.addEventListener('click', () => { pomodoroFunc(25) }); 
+function pomodoroFunc(e) { 
 
+    topBtn(t, w, t, w, w, bl); 
+
+    mystart(); 
+    pauseTimer()
+    isPaused = false; 
+    clearInterval(interval_01)
+    
+    minl = 25;
+    min.textContent = minl;  
+    secl =`0${0}`; 
+    sec.textContent = secl; 
+
+    timerType = 'pomodoro';
+}
+
+
+shortBreak.addEventListener('click', () => { shortbreakFunc(5) }); 
+function shortbreakFunc(e) { 
+    
     topBtn(t, w, w, bl, t, w); 
     mystart(); 
     pauseTimer()
     isPaused = false; 
     clearInterval(interval_01)
     
-    minl = `0${5}`;
+    minl = `0${e}`;
     min.textContent = minl;  
     secl =`0${0}`; 
     sec.textContent = secl; 
 
-
     timerType = 'shortbreak'; 
-}); 
 
-pomodoroTimer.addEventListener('click', () => { 
-
-    topBtn(t, w, t, w, w, bl); 
-    mystart(); 
-    // pauseTimer(); 
-    minl = 25;
-    min.textContent = minl;  
-    timerType = 'pomodoro';
-
-}); 
+}
 
 
-longBreak.addEventListener('click', () => { 
 
+longBreak.addEventListener('click', () => { longbreak(10) });
+function longbreak(e) { 
     pauseTimer()
     isPaused = false; 
     clearInterval(interval_01)
 
-    minl = 10;
+    minl = e;
     secl = 0 + "0"; 
     sec.textContent = secl; 
     min.textContent = minl;  
@@ -225,8 +243,7 @@ longBreak.addEventListener('click', () => {
 
     topBtn(w, bl, t, w, t, w)
     mystart(); 
-
-}); 
+} 
 
 
 /// seeting up the sart, pause  and resume button 
@@ -262,28 +279,39 @@ const saveChangesButton = document.getElementById('save-changes-btn');
 
 saveChangesButton.addEventListener('click', () => { 
 
+    
     const pomodoroValue = pomodoroInputTimer.value; 
     const longBreakValue = longBreakInputTimer.value; 
     const shortbreakValue = shortBreakInputTimer.value; 
     const mainModal = document.querySelector("#modal-Grand_parent"); 
     
 
-    console.log('hola');
-    
+
     if (timerType === 'pomodoro') { 
-        minl = Number(pomodoroValue);
+        if ( staticTimer === 'pomo') { 
+            console.log('hey Pomo');
+            minl = Number(pomodoroValue);
+        }
+
         secl = `0${0}`; 
-        
     }else if ( timerType === 'shortbreak' ) { 
+        if ( staticTimer === 'short') { 
+            console.log('hey Shoteee');
+         
+        }
         minl= Number(shortbreakValue); 
         secl = `0${0}`; 
         min.textContent = minl;
         sec.textContent = secl;
         
-    }else if ( timerType === 'longbreak') { 
+    }else if ( timerType === 'longbreak') {
+        if ( staticTimer === 'long') { 
+            console.log('hey longeee');
+        } 
         minl = Number(longBreakValue); 
         secl = `0${0}`; 
         min.textContent = minl; 
+        
     }
 
     sec.textContent = secl; 

@@ -17,15 +17,26 @@ footer.addEventListener('mouseout', () => { hideEle() });
 // Function to toggle fullscreen
 function toggleFullScreen() {
   if (!document.fullscreenElement) {
+    footer.style.marginTop = '10rem';
     document.documentElement.requestFullscreen().catch((err) => {
       console.error(`Error attempting to enable full-screen mode: ${err.message}`);
     });
   } else {
+    footer.style.marginTop = '3.5rem';
     if (document.exitFullscreen) {
       document.exitFullscreen();
     }
   }
-}
+}; 
+/// Style footer when fullscreen is activated 
+
+// const isFullScreen = document.fullscreenElement !== null;
+
+// if (isFullScreen) {
+//     footer.style.backgroundColor = 'blue';
+// } else {
+//     footer.style.backgroundColor = 'red';
+// }
 
 // Add a click event listener to the button
 fullScreenLogo.addEventListener("click", toggleFullScreen);

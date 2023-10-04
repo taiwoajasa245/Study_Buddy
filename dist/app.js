@@ -111,10 +111,6 @@ changeBackground.addEventListener("change", function() {
     }
 });
 
-/// Style footer when fullscreen is activated 
-
-const isFullScreen = document.fullscreenElement !== null;
-const divToStyle = document.querySelector('#yourDivId');
 
 
 

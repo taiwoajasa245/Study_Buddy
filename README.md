@@ -39,6 +39,8 @@ StudyBuddy is designed to be user-friendly. Here's how you can make the most of 
 
 ### Changing the Background
 
+<hr> 
+
 1. Open StudyBuddy in your web browser.
 2. Click the "Settings" icon then navigate to the Select theme.
 3. Select an image  from the provided background options.

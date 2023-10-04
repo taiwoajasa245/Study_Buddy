@@ -11,6 +11,7 @@ StudyBuddy is a customizable study timer designed to help you stay focused and p
 - **Customizable Timer:** Adjust the study and break durations to suit your ideal work intervals.
 - **Background Customization:** Choose and change background images to create a motivating study environment.
 - **Pomodoro Technique:** Implement the Pomodoro Technique for focused study sprints.
+- **Music:** Play soft background  music while reading.  
 
 ## Getting Started
 
@@ -54,9 +55,7 @@ We welcome contributions to improve StudyBuddy! If you'd like to contribute, ple
 
 We appreciate your help in making StudyBuddy better!
 
-<!-- ## License
 
-This project is licensed under the [insert-license-here] License. See the [LICENSE.md](LICENSE.md) file for details. -->
 
 ## Contact
 

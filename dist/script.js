@@ -71,7 +71,8 @@ function startInterval() {
 
             if (minl <= 0 && secl <= 0) { 
                 clearInterval(interval_01)
-                mystart();  
+                mystart(); 
+                playAudio();  
             }; 
       
         }, 1000);
@@ -284,7 +285,21 @@ resumeMeBtn.addEventListener('click', () =>  {
 function playAudio() {
     var audio = new Audio('/dist/alarm/031974_30-seconds-alarm-72117.mp3'); // Replace with your sound file path
     audio.play();
+
+        // Set a timer to stop the audio after 10 seconds
+    var stopTimer = setTimeout(function() {
+        audio.pause();
+        audio.currentTime = 0; // Reset the audio to the beginning
+    }, 10000); // 10000 milliseconds = 10 seconds
+
 }
+
+        // function stopAudio() {
+        //     audio.pause();
+        //     audio.currentTime = 0;
+        //     clearTimeout(stopTimer);
+        // }
+
 
 
 // settings navigation timer 

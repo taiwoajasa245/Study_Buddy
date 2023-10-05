@@ -294,11 +294,12 @@ function playAudio() {
 
 }
 
-        // function stopAudio() {
-        //     audio.pause();
-        //     audio.currentTime = 0;
-        //     clearTimeout(stopTimer);
-        // }
+    function stopAudio() {
+        console.log('stop audio');
+        audio.pause();
+        audio.currentTime = 0;
+        // clearTimeout(stopTimer);
+    }
 
 
 

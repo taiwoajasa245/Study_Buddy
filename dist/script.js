@@ -81,6 +81,8 @@ function startInterval() {
 
 function countDown() { 
     reload.classList.remove('animate-spin'); 
+    playAudio(); 
+    
     
     
     // reduce minute 
@@ -276,6 +278,13 @@ resumeMeBtn.addEventListener('click', () =>  {
     resumeMeBtn.style.display = "none";
     resumeTimer();  
 }); 
+
+// audio 
+
+function playAudio() {
+    var audio = new Audio('/dist/alarm/031974_30-seconds-alarm-72117.mp3'); // Replace with your sound file path
+    audio.play();
+}
 
 
 // settings navigation timer 

@@ -81,8 +81,7 @@ function startInterval() {
 }
 
 function countDown() { 
-    reload.classList.remove('animate-spin'); 
-    playAudio(); 
+    reload.classList.remove('animate-spin');
     
     
     
@@ -118,10 +117,6 @@ function countDown() {
 }; 
 
 
-// timer.addEventListener('click', () => { 
-//     clearInterval(interval_01) 
-//     reload.classList.remove('animate-spin');
-// }); 
 
 reload.addEventListener('click', () => { 
 
@@ -157,7 +152,8 @@ reload.addEventListener('click', () => {
         min.textContent = minl; 
         sec.textContent = secl; 
     };
-    reloadMe()
+    reloadMe(); 
+    stopAudio(); 
 })
 
 
@@ -280,26 +276,44 @@ resumeMeBtn.addEventListener('click', () =>  {
     resumeTimer();  
 }); 
 
+
 // audio 
 
-function playAudio() {
-    var audio = new Audio('/dist/alarm/031974_30-seconds-alarm-72117.mp3'); // Replace with your sound file path
-    audio.play();
+// const audios = document.getElementById('audios'); 
 
-        // Set a timer to stop the audio after 10 seconds
+const alarmAudio  = {
+
+    secondsAlarm: "'/dist/alarm/031974_30-seconds-alarm-72117.mp3'",
+    alarmBeepClock: "'/dist/alarm/alarm_beep-clock-165474.mp3'",
+    shortClockAlarm: "'/dist/alarm/alarm-clock-short-6402.mp3'",
+    clockAlarm: "'/dist/alarm/clock-alarm-8761.mp3'",
+    darkSitar: "'/dist/alarm/dark-sitar-7546.mp3'",
+    simpleClock: "'/dist/alarm/oversimplified-alarm-clock-113180.mp3'",
+    rigtone: "'/dist/alarm/ringtone-126505.mp3'",
+    clockStrickes: "'/dist/alarm/the-clock-strickes-twelve-o-clock-nature-sounds-7806.mp3'",
+}; 
+
+console.log(alarmAudio.clockAlarm);
+var audio = new Audio('/dist/alarm/031974_30-seconds-alarm-72117.mp3'); 
+
+function playAudio() {
+    audio.play();
+    console.log('audioed play');
+    // Set a timer to stop the audio after 10 seconds
     var stopTimer = setTimeout(function() {
-        audio.pause();
-        audio.currentTime = 0; // Reset the audio to the beginning
-    }, 10000); // 10000 milliseconds = 10 seconds
+        stopAudio() // Reset the audio to the beginning
+    }, 5000); // 10000 milliseconds = 10 seconds
 
 }
 
-    function stopAudio() {
-        console.log('stop audio');
-        audio.pause();
-        audio.currentTime = 0;
-        // clearTimeout(stopTimer);
-    }
+
+
+function stopAudio() {
+    console.log('stop audio');
+    audio.pause();
+    audio.currentTime = 0;
+    clearTimeout(stopTimer);
+}
 
 
 

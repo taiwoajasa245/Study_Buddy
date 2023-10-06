@@ -53,6 +53,8 @@ const backChange = para => {
     document.body.style.backgroundImage = para;  
 }
 
+
+
 /// working on the  bg image
 const imageBackground  = { 
     forestView:"url('/dist/img/b4b9101e8cdbad99d7b0.jpg')", 

@@ -59,7 +59,7 @@ We appreciate your help in making StudyBuddy better!
 
 
 
-## Contact
+## Contact 
 
 If you have questions, suggestions, or feedback about StudyBuddy, please feel free to reach out to us:
 

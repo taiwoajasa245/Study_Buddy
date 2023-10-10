@@ -112,6 +112,7 @@ function countDown() {
     // reduce second every 1 second
     secl = 60; 
     startInterval();
+
    
     
 }; 
@@ -317,7 +318,7 @@ function stopAudio() {
 
 volumeRange.addEventListener('input', function () {
     audio.volume = volumeRange.value;
-    console.log('Volume set to ' + volumeRange.value);
+    // console.log('Volume set to ' + volumeRange.value);
 });
 
 

@@ -293,8 +293,8 @@ const alarmAudio  = {
     clockStrickes: "'/dist/alarm/the-clock-strickes-twelve-o-clock-nature-sounds-7806.mp3'",
 }; 
 
-console.log(alarmAudio.clockAlarm);
 var audio = new Audio('/dist/alarm/031974_30-seconds-alarm-72117.mp3'); 
+var volumeRange = document.querySelector('#volume-range')
 
 function playAudio() {
     audio.play();
@@ -314,6 +314,11 @@ function stopAudio() {
     audio.currentTime = 0;
     clearTimeout(stopTimer);
 }
+
+volumeRange.addEventListener('input', function () {
+    audio.volume = volumeRange.value;
+    console.log('Volume set to ' + volumeRange.value);
+});
 
 
 

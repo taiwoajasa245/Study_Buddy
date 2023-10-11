@@ -341,35 +341,35 @@ saveChangesButton.addEventListener('click', () => {
     
 
 
-    if (timerType === 'pomodoro') { 
-        if ( staticTimer === 'pomo') { 
-            console.log('hey Pomo');
-            minl = Number(pomodoroValue);
-        }
+    // if (timerType === 'pomodoro') { 
+    //     if ( staticTimer === 'pomo') { 
+    //         console.log('hey Pomo');
+    //         minl = Number(pomodoroValue);
+    //     }
 
-        secl = `0${0}`; 
-    }else if ( timerType === 'shortbreak' ) { 
-        if ( staticTimer === 'short') { 
-            console.log('hey Shoteee');
+    //     secl = `0${0}`; 
+    // }else if ( timerType === 'shortbreak' ) { 
+    //     if ( staticTimer === 'short') { 
+    //         console.log('hey Shoteee');
          
-        }
-        minl= Number(shortbreakValue); 
-        secl = `0${0}`; 
-        min.textContent = minl;
-        sec.textContent = secl;
+    //     }
+    //     minl= Number(shortbreakValue); 
+    //     secl = `0${0}`; 
+    //     min.textContent = minl;
+    //     sec.textContent = secl;
+    //     taticTimer === 'long') { 
+    //         co
+    // }else if ( timerType === 'longbreak') {
+    //     if ( snsole.log('hey longeee');
+    //     } 
+    //     minl = Number(longBreakValue); 
+    //     secl = `0${0}`; 
+    //     min.textContent = minl; 
         
-    }else if ( timerType === 'longbreak') {
-        if ( staticTimer === 'long') { 
-            console.log('hey longeee');
-        } 
-        minl = Number(longBreakValue); 
-        secl = `0${0}`; 
-        min.textContent = minl; 
-        
-    }
+    // }
 
-    sec.textContent = secl; 
-    min.textContent = minl; 
+    // sec.textContent = secl; 
+    // min.textContent = minl; 
     mainModal.style.display = "none"; 
 
 
@@ -384,36 +384,35 @@ function Hide() {
 
 
 // Add an event listener for the "change" event
-checkbox2.addEventListener("change", function() {
+checkbox_2.addEventListener("change", function() {
 // This function will run when the checkbox is toggled
-if (checkbox2.checked) {
-// Checkbox is checked
-yourFunctionWhenChecked();
-} else {
-// Checkbox is unchecked
-yourFunctionWhenUnchecked();
-}
+    if (checkbox_2.checked) {
+        // Checkbox is checked
+        yourFunctionWhenChecked();
+        } else {
+        // Checkbox is unchecked
+        yourFunctionWhenUnchecked();
+    }
 });
 
 function yourFunctionWhenChecked() {
-// Code to run when the checkbox is checked
-// Define your custom functions
-console.log("Checkbox is checked");
+    console.log("Checkbox is checked");
 }
 
 function yourFunctionWhenUnchecked() {
-// Code to run when the checkbox is unchecked
-console.log("Checkbox is unchecked");
+    console.log("Checkbox is unchecked");
 }
 
 }
 
-
+let spotifyPlaylist = document.getElementById()
 
 var checkbox1 = document.getElementById("checkBox1");
-var checkbox2 = document.getElementById("checkBox2");
+var checkbox_2 = document.getElementById("checkbox2");
 var checkbox3 = document.getElementById("checkBox3");
 var checkbox4 = document.getElementById("checkBox4");
+
+
 
 
 

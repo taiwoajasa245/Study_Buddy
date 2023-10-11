@@ -396,16 +396,20 @@ checkbox_2.addEventListener("change", function() {
 });
 
 function yourFunctionWhenChecked() {
-    console.log("Checkbox is checked");
+    let spotifyPlaylist = document.getElementById('spotifyPlaylist')
+    spotifyPlaylist.style.display = 'none'; 
+    console.log(spotifyPlaylist);
+    // console.log("Checkbox is checked");
 }
 
 function yourFunctionWhenUnchecked() {
     console.log("Checkbox is unchecked");
+    let spotifyPlaylist = document.getElementById('spotifyPlaylist')
+    spotifyPlaylist.style.display = 'block'; 
 }
 
 }
 
-let spotifyPlaylist = document.getElementById()
 
 var checkbox1 = document.getElementById("checkBox1");
 var checkbox_2 = document.getElementById("checkbox2");

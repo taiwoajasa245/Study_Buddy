@@ -371,7 +371,51 @@ saveChangesButton.addEventListener('click', () => {
     sec.textContent = secl; 
     min.textContent = minl; 
     mainModal.style.display = "none"; 
+
+
+                
+                
+                    Hide()
 })
+
+
+function Hide() { 
+    // Get the checkbox element by its id
+
+
+// Add an event listener for the "change" event
+checkbox2.addEventListener("change", function() {
+// This function will run when the checkbox is toggled
+if (checkbox2.checked) {
+// Checkbox is checked
+yourFunctionWhenChecked();
+} else {
+// Checkbox is unchecked
+yourFunctionWhenUnchecked();
+}
+});
+
+function yourFunctionWhenChecked() {
+// Code to run when the checkbox is checked
+// Define your custom functions
+console.log("Checkbox is checked");
+}
+
+function yourFunctionWhenUnchecked() {
+// Code to run when the checkbox is unchecked
+console.log("Checkbox is unchecked");
+}
+
+}
+
+
+
+var checkbox1 = document.getElementById("checkBox1");
+var checkbox2 = document.getElementById("checkBox2");
+var checkbox3 = document.getElementById("checkBox3");
+var checkbox4 = document.getElementById("checkBox4");
+
+
 
 
 

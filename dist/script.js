@@ -87,8 +87,6 @@ function startInterval() {
 function countDown() { 
     reload.classList.remove('animate-spin');
     
-    
-    
     // reduce minute 
 
     if (timerType === 'pomodoro') { 
@@ -102,7 +100,6 @@ function countDown() {
         secl = 60; 
 
         staticTimer = 'short'
-
       
     }else if ( timerType === 'longbreak') { 
         minl = 10; 

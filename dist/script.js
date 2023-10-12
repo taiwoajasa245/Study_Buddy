@@ -5,16 +5,10 @@ const fullScreenLogo = document.getElementById("full-screen");
 const reload = document.getElementById('reload'); 
 const imageLogo = document.getElementById('image-logo'); 
 
-
-
-
-
 const showHidden = () => { fullScreenLogo.style.display = 'block'}; 
 function hideEle() { fullScreenLogo.style.display = "none" }; 
 footer.addEventListener('mouseover', () => { showHidden() }); 
 footer.addEventListener('mouseout', () => { hideEle() }); 
-
-
 
 
 // Function to toggle fullscreen
@@ -86,7 +80,7 @@ function startInterval() {
 
 function countDown() { 
     reload.classList.remove('animate-spin');
-    
+
     // reduce minute 
 
     if (timerType === 'pomodoro') { 
@@ -113,12 +107,8 @@ function countDown() {
     // reduce second every 1 second
     secl = 60; 
     startInterval();
-
-   
     
 }; 
-
-
 
 reload.addEventListener('click', () => { 
 
@@ -233,7 +223,6 @@ function shortbreakFunc(e) {
     sec.textContent = secl; 
 
     timerType = 'shortbreak'; 
-
 }
 
 longBreak.addEventListener('click', () => { longbreak(10) });

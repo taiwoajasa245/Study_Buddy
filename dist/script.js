@@ -47,6 +47,7 @@ let isPaused = false;
 let minl;  
 let secl;
 let staticTimer; 
+let myAudioPlay; 
 let timerType = "pomodoro"; 
 
 
@@ -72,7 +73,10 @@ function startInterval() {
             if (minl <= 0 && secl <= 0) { 
                 clearInterval(interval_01)
                 mystart(); 
-                playAudio();  
+                myAudioPlay = 'play'; 
+
+                
+               
             }; 
       
         }, 1000);
@@ -338,93 +342,44 @@ saveChangesButton.addEventListener('click', () => {
     const longBreakValue = longBreakInputTimer.value; 
     const shortbreakValue = shortBreakInputTimer.value; 
     const mainModal = document.querySelector("#modal-Grand_parent"); 
-    
-
-
-    // if (timerType === 'pomodoro') { 
-    //     if ( staticTimer === 'pomo') { 
-    //         console.log('hey Pomo');
-    //         minl = Number(pomodoroValue);
-    //     }
-
-    //     secl = `0${0}`; 
-    // }else if ( timerType === 'shortbreak' ) { 
-    //     if ( staticTimer === 'short') { 
-    //         console.log('hey Shoteee');
-         
-    //     }
-    //     minl= Number(shortbreakValue); 
-    //     secl = `0${0}`; 
-    //     min.textContent = minl;
-    //     sec.textContent = secl;
-    //     taticTimer === 'long') { 
-    //         co
-    // }else if ( timerType === 'longbreak') {
-    //     if ( snsole.log('hey longeee');
-    //     } 
-    //     minl = Number(longBreakValue); 
-    //     secl = `0${0}`; 
-    //     min.textContent = minl; 
-        
-    // }
-
-    // sec.textContent = secl; 
-    // min.textContent = minl; 
     mainModal.style.display = "none"; 
-   
+    saveCheckBox(); 
      
 })
 
 
-// function Hide(ele, ele2 ) { 
+function saveCheckBox() { 
+    // Get all checkboxes with the class "custom-checkbox"
+    const checkboxes = document.querySelectorAll('.custom-checkbox');
 
-//     // Add an event listener for the "change" event
-//     ele.addEventListener("change", function() {
-//     // This function will run when the checkbox is toggled
-//         if (ele.checked) {
-//             // Checkbox is checked
-//             yourFunctionWhenChecked();
-//             } else {
-//             // Checkbox is unchecked
-//             yourFunctionWhenUnchecked();
-//         }
-//     });
-
-//     function yourFunctionWhenChecked() {
-//         let spotifyPlaylist = document.getElementById('spotifyPlaylist')
-//         spotifyPlaylist.style.display = 'none'; 
-//         console.log(spotifyPlaylist);
-//         // console.log("Checkbox is checked");
-//     }
-    
-//     function yourFunctionWhenUnchecked() {
-//         console.log("Checkbox is unchecked");
-//         let spotifyPlaylist = document.getElementById('spotifyPlaylist')
-//         spotifyPlaylist.style.display = 'block'; 
-//     }
-    
-// }
-
-
-        // Get all checkboxes with the class "custom-checkbox"
-        const checkboxes = document.querySelectorAll('.custom-checkbox');
-
-        // Add a single event listener to handle all checkboxes
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function () {
-                const action = this.getAttribute('data-action');
-                if (this.checked) {
-                    alert(`${action} is checked`);
-                } else {
-                    alert(`${action} is unchecked`);
+    // Add a single event listener to handle all checkboxes
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function () {
+            const action = this.getAttribute('data-action');
+            let spotifyPlaylist = document.getElementById('spotifyPlaylist')
+            if (this.checked) {
+                // alert(`${action} is checked`);
+                if (this === checkboxes[1]) {
+                    spotifyPlaylist.style.display = 'block'; 
+                    // alert('Perform specific action for Checkbox 2');
+                } 
+                if (this === checkboxes[3]) {
+                    // Checkbox 2 is checked, perform specific action
+                    if (myAudioPlay === 'play') {
+                        playAudio()
+                    }
                 }
-            });
+            } else {
+                if (this === checkboxes[1]) {
+                    stopAudio(); 
+                    spotifyPlaylist.style.display = 'none';
+                    console.log("hey"); 
+                }
+                alert(`${action} is unchecked`);
+            }
         });
-
-
-// var checkbox_2 = document.getElementById("checkbox2");
-// var checkbox4 = document.getElementById("checkBox4");
-
+    });
+}
 
 
 

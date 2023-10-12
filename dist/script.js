@@ -169,7 +169,6 @@ function pauseTimer() {
         isPaused = true;
     }
 }
-
 // Function to resume the interval
 
 function resumeTimer() {
@@ -240,8 +239,6 @@ function shortbreakFunc(e) {
 
 }
 
-
-
 longBreak.addEventListener('click', () => { longbreak(10) });
 function longbreak(e) { 
     pauseTimer()
@@ -257,7 +254,6 @@ function longbreak(e) {
     topBtn(w, bl, t, w, t, w)
     mystart(); 
 } 
-
 
 /// seeting up the sart, pause  and resume button 
 const startBtn = document.getElementById("let's-go"); 
@@ -281,22 +277,17 @@ resumeMeBtn.addEventListener('click', () =>  {
     resumeTimer();  
 }); 
 
+// const alarmAudio  = {
 
-// audio 
-
-// const audios = document.getElementById('audios'); 
-
-const alarmAudio  = {
-
-    secondsAlarm: "'/dist/alarm/031974_30-seconds-alarm-72117.mp3'",
-    alarmBeepClock: "'/dist/alarm/alarm_beep-clock-165474.mp3'",
-    shortClockAlarm: "'/dist/alarm/alarm-clock-short-6402.mp3'",
-    clockAlarm: "'/dist/alarm/clock-alarm-8761.mp3'",
-    darkSitar: "'/dist/alarm/dark-sitar-7546.mp3'",
-    simpleClock: "'/dist/alarm/oversimplified-alarm-clock-113180.mp3'",
-    rigtone: "'/dist/alarm/ringtone-126505.mp3'",
-    clockStrickes: "'/dist/alarm/the-clock-strickes-twelve-o-clock-nature-sounds-7806.mp3'",
-}; 
+//     secondsAlarm: "'/dist/alarm/031974_30-seconds-alarm-72117.mp3'",
+//     alarmBeepClock: "'/dist/alarm/alarm_beep-clock-165474.mp3'",
+//     shortClockAlarm: "'/dist/alarm/alarm-clock-short-6402.mp3'",
+//     clockAlarm: "'/dist/alarm/clock-alarm-8761.mp3'",
+//     darkSitar: "'/dist/alarm/dark-sitar-7546.mp3'",
+//     simpleClock: "'/dist/alarm/oversimplified-alarm-clock-113180.mp3'",
+//     rigtone: "'/dist/alarm/ringtone-126505.mp3'",
+//     clockStrickes: "'/dist/alarm/the-clock-strickes-twelve-o-clock-nature-sounds-7806.mp3'",
+// }; 
 
 var audio = new Audio('/dist/alarm/031974_30-seconds-alarm-72117.mp3'); 
 var volumeRange = document.querySelector('#volume-range')
@@ -311,21 +302,17 @@ function playAudio() {
 
 }
 
-
-
 function stopAudio() {
     console.log('stop audio');
     audio.pause();
     audio.currentTime = 0;
     // clearTimeout(stopTimer);
-}
+}; 
 
 volumeRange.addEventListener('input', function () {
     audio.volume = volumeRange.value;
     // console.log('Volume set to ' + volumeRange.value);
 });
-
-
 
 // settings navigation timer 
 
@@ -336,16 +323,10 @@ const saveChangesButton = document.getElementById('save-changes-btn');
 
 
 saveChangesButton.addEventListener('click', () => { 
-
-    
-    const pomodoroValue = pomodoroInputTimer.value; 
-    const longBreakValue = longBreakInputTimer.value; 
-    const shortbreakValue = shortBreakInputTimer.value; 
     const mainModal = document.querySelector("#modal-Grand_parent"); 
     mainModal.style.display = "none"; 
-    saveCheckBox(); 
-     
-})
+    saveCheckBox();   
+}); 
 
 
 function saveCheckBox() { 

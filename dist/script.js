@@ -317,7 +317,7 @@ function stopAudio() {
     console.log('stop audio');
     audio.pause();
     audio.currentTime = 0;
-    clearTimeout(stopTimer);
+    // clearTimeout(stopTimer);
 }
 
 volumeRange.addEventListener('input', function () {
@@ -371,11 +371,10 @@ function saveCheckBox() {
                 }
             } else {
                 if (this === checkboxes[1]) {
-                    stopAudio(); 
                     spotifyPlaylist.style.display = 'none';
-                    console.log("hey"); 
+        
                 }
-                alert(`${action} is unchecked`);
+               
             }
         });
     });

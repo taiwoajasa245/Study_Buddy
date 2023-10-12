@@ -371,50 +371,59 @@ saveChangesButton.addEventListener('click', () => {
     // sec.textContent = secl; 
     // min.textContent = minl; 
     mainModal.style.display = "none"; 
-
-
-                
-                
-                    Hide()
+   
+     
 })
 
 
-function Hide() { 
-    // Get the checkbox element by its id
+// function Hide(ele, ele2 ) { 
+
+//     // Add an event listener for the "change" event
+//     ele.addEventListener("change", function() {
+//     // This function will run when the checkbox is toggled
+//         if (ele.checked) {
+//             // Checkbox is checked
+//             yourFunctionWhenChecked();
+//             } else {
+//             // Checkbox is unchecked
+//             yourFunctionWhenUnchecked();
+//         }
+//     });
+
+//     function yourFunctionWhenChecked() {
+//         let spotifyPlaylist = document.getElementById('spotifyPlaylist')
+//         spotifyPlaylist.style.display = 'none'; 
+//         console.log(spotifyPlaylist);
+//         // console.log("Checkbox is checked");
+//     }
+    
+//     function yourFunctionWhenUnchecked() {
+//         console.log("Checkbox is unchecked");
+//         let spotifyPlaylist = document.getElementById('spotifyPlaylist')
+//         spotifyPlaylist.style.display = 'block'; 
+//     }
+    
+// }
 
 
-// Add an event listener for the "change" event
-checkbox_2.addEventListener("change", function() {
-// This function will run when the checkbox is toggled
-    if (checkbox_2.checked) {
-        // Checkbox is checked
-        yourFunctionWhenChecked();
-        } else {
-        // Checkbox is unchecked
-        yourFunctionWhenUnchecked();
-    }
-});
+        // Get all checkboxes with the class "custom-checkbox"
+        const checkboxes = document.querySelectorAll('.custom-checkbox');
 
-function yourFunctionWhenChecked() {
-    let spotifyPlaylist = document.getElementById('spotifyPlaylist')
-    spotifyPlaylist.style.display = 'none'; 
-    console.log(spotifyPlaylist);
-    // console.log("Checkbox is checked");
-}
-
-function yourFunctionWhenUnchecked() {
-    console.log("Checkbox is unchecked");
-    let spotifyPlaylist = document.getElementById('spotifyPlaylist')
-    spotifyPlaylist.style.display = 'block'; 
-}
-
-}
+        // Add a single event listener to handle all checkboxes
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                const action = this.getAttribute('data-action');
+                if (this.checked) {
+                    alert(`${action} is checked`);
+                } else {
+                    alert(`${action} is unchecked`);
+                }
+            });
+        });
 
 
-var checkbox1 = document.getElementById("checkBox1");
-var checkbox_2 = document.getElementById("checkbox2");
-var checkbox3 = document.getElementById("checkBox3");
-var checkbox4 = document.getElementById("checkBox4");
+// var checkbox_2 = document.getElementById("checkbox2");
+// var checkbox4 = document.getElementById("checkBox4");
 
 
 

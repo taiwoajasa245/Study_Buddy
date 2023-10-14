@@ -41,6 +41,9 @@ let isPaused = false;
 let minl;  
 let secl;
 let staticTimer; 
+let userValue = 25; 
+let shortUserValue = 5; 
+let longUserValue = 10; 
 let myAudioPlay; 
 let timerType = "pomodoro"; 
 
@@ -84,19 +87,17 @@ function countDown() {
     // reduce minute 
 
     if (timerType === 'pomodoro') { 
-        minl = 25;
+        minl = userValue;
         secl = `0${0}`
         staticTimer = 'pomo'; 
     }else if ( timerType === 'shortbreak' ) { 
-        minl= `0${5}`; 
+        minl= `0${shortUserValue}`; 
         min.textContent = minl;
         // secl = `0${0}`; 
         secl = 60; 
-
-        staticTimer = 'short'
       
     }else if ( timerType === 'longbreak') { 
-        minl = 10; 
+        minl = longUserValue; 
         min.textContent = minl;
         secl = `0${0}`; 
         staticTimer = 'long'
@@ -111,23 +112,23 @@ function countDown() {
 }; 
 
 reload.addEventListener('click', () => { 
-
+    
     function reloadMe() { 
     
         if (timerType === 'pomodoro') { 
-            minl = 25;
+            minl = userValue;
             secl = `0${0}`; 
             staticTimer = 'pomo'
 
         }else if ( timerType === 'shortbreak' ) { 
-            minl= `0${5}`; 
+            minl= `0${shortUserValue}`; 
             secl = `0${0}`; 
             min.textContent = minl;
             sec.textContent = secl;
             staticTimer = 'short'
             
         }else if ( timerType === 'longbreak') { 
-            minl = 10; 
+            minl = longUserValue; 
             secl = `0${0}`; 
             min.textContent = minl;
             staticTimer = 'long'
@@ -189,17 +190,17 @@ function topBtn(lt, lw, sw, sb, pb, pw) {
     pomodoroTimer.style.color = pw;
 }; 
 
-pomodoroTimer.addEventListener('click', () => { pomodoroFunc(25) }); 
+pomodoroTimer.addEventListener('click', () => { pomodoroFunc(userValue) }); 
 function pomodoroFunc(e) { 
 
     topBtn(t, w, t, w, w, bl); 
-
+    
     mystart(); 
     pauseTimer()
     isPaused = false; 
     clearInterval(interval_01)
     
-    minl = 25;
+    minl = e;
     min.textContent = minl;  
     secl =`0${0}`; 
     sec.textContent = secl; 
@@ -208,7 +209,7 @@ function pomodoroFunc(e) {
 }
 
 
-shortBreak.addEventListener('click', () => { shortbreakFunc(5) }); 
+shortBreak.addEventListener('click', () => { shortbreakFunc(shortUserValue) }); 
 function shortbreakFunc(e) { 
     
     topBtn(t, w, w, bl, t, w); 
@@ -225,7 +226,7 @@ function shortbreakFunc(e) {
     timerType = 'shortbreak'; 
 }
 
-longBreak.addEventListener('click', () => { longbreak(10) });
+longBreak.addEventListener('click', () => { longbreak(longUserValue) });
 function longbreak(e) { 
     pauseTimer()
     isPaused = false; 
@@ -285,7 +286,7 @@ function playAudio() {
     var stopTimer = setTimeout(function() {
         stopAudio() // Reset the audio to the beginning
     }, 5000); // 10000 milliseconds = 10 seconds
-
+    
 }
 
 function stopAudio() {
@@ -300,19 +301,47 @@ volumeRange.addEventListener('input', function () {
     // console.log('Volume set to ' + volumeRange.value);
 });
 
+
+const saveChangesButton = document.getElementById('save-changes-btn'); 
+
+
 // settings navigation timer 
 
 const pomodoroInputTimer = document.getElementById('pomodoro-input-timer'); 
 const shortBreakInputTimer = document.getElementById('shortbreak-input-timer'); 
 const longBreakInputTimer = document.getElementById('longbreak-input-timer'); 
-const saveChangesButton = document.getElementById('save-changes-btn'); 
-
 
 saveChangesButton.addEventListener('click', () => { 
     const mainModal = document.querySelector("#modal-Grand_parent"); 
     mainModal.style.display = "none"; 
-    saveCheckBox();   
-}); 
+    saveCheckBox(); 
+    
+    userValue = parseInt(pomodoroInputTimer.value, 10); // Parse the input value as an integer
+    shortUserValue = parseInt(shortBreakInputTimer.value, 10); // Parse the input value as an integer
+    longUserValue = parseInt(longBreakInputTimer.value, 10); // Parse the input value as an integer
+    
+    // Get the user's input value from the input field
+
+    // Check if the user entered a valid number (e.g., not empty or non-numeric)
+    if (!isNaN(userValue)) {
+        // Use the user's input value
+        min.textContent = userValue; 
+        alert(`You entered: ${userValue}`); // Replace this with your desired action
+    } else if (!isNaN(shortUserValue)) { 
+        min.textContent = shortUserValue; 
+        alert(`You entered: ${shortBreak}`); // Replace this with your desired action
+    } else if (!isNaN(longUserValue)) { 
+        min.textContent = longUserValue; 
+        alert(`You entered: ${longUserValue}`); // Replace this with your desired action
+    } else {
+        alert('Please enter a valid number.');
+    }
+
+});
+
+
+
+
 
 
 function saveCheckBox() { 

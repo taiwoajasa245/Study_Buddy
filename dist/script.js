@@ -325,12 +325,17 @@ saveChangesButton.addEventListener('click', () => {
     // Check if the user entered a valid number (e.g., not empty or non-numeric)
     if (!isNaN(userValue)) {
         // Use the user's input value
+        console.log("val1");
         min.textContent = userValue; 
         // alert(`You entered: ${userValue}`); // Replace this with your desired action
-    } else if (!isNaN(shortUserValue)) { 
+    } else if (!isNaN(shortUserValue)) {
+        console.log("val2");
+
         min.textContent = shortUserValue; 
         // alert(`You entered: ${shortBreak}`); // Replace this with your desired action
     } else if (!isNaN(longUserValue)) { 
+        console.log("val3");
+
         min.textContent = longUserValue; 
         // alert(`You entered: ${longUserValue}`); // Replace this with your desired action
     } else {

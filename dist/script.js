@@ -311,10 +311,10 @@ const pomodoroInputTimer = document.getElementById('pomodoro-input-timer');
 const shortBreakInputTimer = document.getElementById('shortbreak-input-timer'); 
 const longBreakInputTimer = document.getElementById('longbreak-input-timer'); 
 
+saveCheckBox(); 
 saveChangesButton.addEventListener('click', () => { 
     const mainModal = document.querySelector("#modal-Grand_parent"); 
     mainModal.style.display = "none"; 
-    saveCheckBox(); 
     
     userValue = parseInt(pomodoroInputTimer.value, 10); // Parse the input value as an integer
     shortUserValue = parseInt(shortBreakInputTimer.value, 10); // Parse the input value as an integer

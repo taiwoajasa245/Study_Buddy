@@ -75,7 +75,9 @@ function startInterval() {
                 
                
             }; 
-      
+            const title = minl; 
+            const titelSec = secl; 
+            document.title = `${title}:${titelSec} | StuddyBuddy`;  
         }, 1000);
         
     }
@@ -108,6 +110,7 @@ function countDown() {
     // reduce second every 1 second
     secl = 60; 
     startInterval();
+  
     
 }; 
 
@@ -116,8 +119,13 @@ reload.addEventListener('click', () => {
     function reloadMe() { 
     
         if (timerType === 'pomodoro') { 
-            minl = userValue;
+            // minl = userValue;
+            // secl = `0${0}`; 
+            // staticTimer = 'pomo'
+            minl= `${userValue}`; 
             secl = `0${0}`; 
+            min.textContent = minl;
+            sec.textContent = secl;
             staticTimer = 'pomo'
 
         }else if ( timerType === 'shortbreak' ) { 
@@ -142,8 +150,9 @@ reload.addEventListener('click', () => {
         resumeMeBtn.style.display = "none"; 
         pauseMeBtn.style.display = "none"; 
     
-        min.textContent = minl; 
-        sec.textContent = secl; 
+        const title = minl; 
+        const titelSec = secl;  
+        document.title = `${title}:${titelSec} | StuddyBuddy`;  
     };
     reloadMe(); 
     stopAudio(); 

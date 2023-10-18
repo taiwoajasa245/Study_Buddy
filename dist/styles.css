@@ -593,6 +593,31 @@ video {
   margin-bottom: 1rem;
 }
 
+.my-1{
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.my-5{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.mx-4{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.mx-7{
+  margin-left: 1.75rem;
+  margin-right: 1.75rem;
+}
+
+.my-6{
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 .mb-1{
   margin-bottom: 0.25rem;
 }
@@ -816,6 +841,10 @@ video {
   background-size: cover;
 }
 
+.bg-no-repeat{
+  background-repeat: no-repeat;
+}
+
 .p-1{
   padding: 0.25rem;
 }
@@ -826,6 +855,10 @@ video {
 
 .p-3{
   padding: 0.75rem;
+}
+
+.p-12{
+  padding: 3rem;
 }
 
 .px-10{
@@ -851,6 +884,11 @@ video {
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .text-center{
@@ -883,6 +921,46 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[50px\]{
+  font-size: 50px;
+}
+
+.text-\[80px\]{
+  font-size: 80px;
+}
+
+.text-\[20px\]{
+  font-size: 20px;
+}
+
+.text-\[10px\]{
+  font-size: 10px;
+}
+
+.text-\[15px\]{
+  font-size: 15px;
+}
+
+.text-\[16px\]{
+  font-size: 16px;
+}
+
+.text-\[12px\]{
+  font-size: 12px;
+}
+
+.text-\[1px\]{
+  font-size: 1px;
+}
+
+.text-\[11px\]{
+  font-size: 11px;
+}
+
+.text-\[11\.5px\]{
+  font-size: 11.5px;
 }
 
 .font-bold{
@@ -926,6 +1004,14 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-\[px\]{
+  color: px;
+}
+
+.text-\[\]{
+  color: ;
 }
 
 .underline{
@@ -1178,6 +1264,24 @@ video {
 }
 
 @media (min-width: 640px){
+  .sm\:mx-3{
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+  }
+
+  .sm\:my-0{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .sm\:block{
+    display: block;
+  }
+
+  .sm\:flex{
+    display: flex;
+  }
+
   .sm\:h-4\/5{
     height: 80%;
   }
@@ -1186,7 +1290,38 @@ video {
     width: 50%;
   }
 
+  .sm\:flex-row{
+    flex-direction: row;
+  }
+
   .sm\:rounded-2xl{
     border-radius: 1rem;
+  }
+
+  .sm\:bg-red-50{
+    --tw-bg-opacity: 1;
+    background-color: rgb(254 242 242 / var(--tw-bg-opacity));
+  }
+
+  .sm\:bg-no-repeat{
+    background-repeat: no-repeat;
+  }
+
+  .sm\:p-2{
+    padding: 0.5rem;
+  }
+
+  .sm\:px-4{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .sm\:text-\[100px\]{
+    font-size: 100px;
+  }
+
+  .sm\:text-base{
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }

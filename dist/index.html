@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link href="styles.css" rel="stylesheet">
-    <title >StudyBuddy</title>
+    <title>StudyBuddy</title>
 </head>
 
 <style>
@@ -54,7 +54,7 @@
         -moz-appearance: textfield;
     }
 </style>
-<body class="text-pink-100 bg-forest-view bg-cover font-document ">
+<body class="text-pink-100 bg-forest-view bg-no-repeat sm:bg-no-repeat font-document ">
     
     <div id="allsection" class="w-full h-screen px-4rem relative ">
         <header class="">
@@ -67,14 +67,14 @@
         
         <main class=" px-10 py-5  flex flex-col justify-evenly   items-center ">
             <section id="top-btn" class=" w-100rem h-100rem">
-                <ul class="w-[100%] h-[100%] flex justify-evenly items-start"> 
-                    <li id="pomodoro" class="p-2 mx-3 border-2 border-white bg-white text-black font-semibold rounded-[20px] px-4 hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ">pomodoro</li>
-                    <li id="short_break" class="p-2 mx-3 border-2 border-white  font-semibold rounded-[20px] px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">short break</li>
-                    <li id="long_break" class="p-2 mx-3 border-2 border-white font-semibold rounded-[20px] px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none" >long break</li>
+                <ul class="w-[100%] h-[100%] flex justify-evenly  flex-col sm:flex-row items-start"> 
+                    <li id="pomodoro" class="p-2 mx-3 border-2 border-white text-sm sm:text-base bg-white text-black font-semibold rounded-[20px] px-5 sm:px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ">pomodoro</li>
+                    <li id="short_break" class=" p-2 sm:text-base text-sm  sm:mx-3 sm:my-0 my-5 border-2 border-white  font-semibold rounded-[20px] px-5 sm:px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">short break</li>
+                    <li id="long_break" class="p-2 text-sm mx-3 sm:text-base border-2 border-white font-semibold rounded-[20px] px-5 sm:px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">long break</li>
                 </ul>
             </section>
             <section>
-                <p id="timer" title="click here to stop timer" class="text-[100px] hover:cursor-pointer font-semibold text-pink-50 ">
+                <p id="timer" title="click here to stop timer" class="text-[80px] sm:text-[100px] hover:cursor-pointer font-semibold text-pink-50 ">
                     <span id="min"> 25</span>:<span id="sec">00</span>
                 </p>
             </section>
@@ -98,7 +98,7 @@
 
 
         <footer id="foot" class="w-full p-1 mt-14 flex h-[2rem] hover:flex justify-between items-center ">
-            <div id="music">
+            <div id="music" class="hidden sm:block ">
                 <iframe id="spotifyPlaylist"  style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1ByzdKSKWgv9M18IEUScfQ?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
     

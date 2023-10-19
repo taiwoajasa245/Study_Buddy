@@ -136,10 +136,11 @@ reload.addEventListener('click', () => {
             staticTimer = 'short'
             
         }else if ( timerType === 'longbreak') { 
-            minl = longUserValue; 
+            minl= `${longUserValue}`; 
             secl = `0${0}`; 
             min.textContent = minl;
-            staticTimer = 'long'
+            sec.textContent = secl;
+            staticTimer = 'long';
             
         }
     

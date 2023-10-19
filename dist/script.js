@@ -153,7 +153,7 @@ reload.addEventListener('click', () => {
     
         const title = minl; 
         const titelSec = secl;  
-        document.title = `${title}:${titelSec} | StuddyBuddy`;  
+        document.title = `${title}:${titelSec} | StudyBuddy`;  
     };
     reloadMe(); 
     stopAudio(); 

@@ -291,7 +291,6 @@ var volumeRange = document.querySelector('#volume-range')
 
 function playAudio() {
     audio.play();
-    console.log('audioed play');
     // Set a timer to stop the audio after 10 seconds
     var stopTimer = setTimeout(function() {
         stopAudio() // Reset the audio to the beginning
@@ -300,7 +299,6 @@ function playAudio() {
 }
 
 function stopAudio() {
-    console.log('stop audio');
     audio.pause();
     audio.currentTime = 0;
     // clearTimeout(stopTimer);
@@ -308,7 +306,7 @@ function stopAudio() {
 
 volumeRange.addEventListener('input', function () {
     audio.volume = volumeRange.value;
-    // console.log('Volume set to ' + volumeRange.value);
+   
 });
 
 
@@ -335,16 +333,13 @@ saveChangesButton.addEventListener('click', () => {
     // Check if the user entered a valid number (e.g., not empty or non-numeric)
     if (!isNaN(userValue)) {
         // Use the user's input value
-        console.log("val1");
         min.textContent = userValue; 
         // alert(`You entered: ${userValue}`); // Replace this with your desired action
     } else if (!isNaN(shortUserValue)) {
-        console.log("val2");
 
         min.textContent = shortUserValue; 
         // alert(`You entered: ${shortBreak}`); // Replace this with your desired action
     } else if (!isNaN(longUserValue)) { 
-        console.log("val3");
 
         min.textContent = longUserValue; 
         // alert(`You entered: ${longUserValue}`); // Replace this with your desired action

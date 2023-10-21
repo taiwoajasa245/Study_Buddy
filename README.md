@@ -35,7 +35,7 @@ StudyBuddy is designed to be user-friendly. Here's how you can make the most of 
 1. Open StudyBuddy in your web browser.
 2. Adjust the study and break durations using the provided input fields.
 3. Click the "Start" button to initiate your study session.
-4. StudyBuddy will notify you when it's time to take a break.
+<!-- 4. StudyBuddy will notify you when it's time to take a break. -->
 
 ### Changing the Background
 

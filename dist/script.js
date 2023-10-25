@@ -71,8 +71,7 @@ function startInterval() {
                 clearInterval(interval_01)
                 mystart(); 
                 myAudioPlay = 'play'; 
-
-                
+       
                
             }; 
             const title = minl; 
@@ -389,8 +388,6 @@ function saveCheckBox() {
 // function resar(params) {
     
 // }
-
-
 
 
 

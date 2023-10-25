@@ -58,7 +58,7 @@ StudyBuddy is a customizable study timer designed to help you stay focused and p
 
 6. Open your web browser and visit http://localhost:3000 to view the project locally.
 
-### Prerequisites
+## Prerequisites
 
 To use StudyBuddy, you'll need:
 
@@ -71,7 +71,7 @@ List any prerequisites or system requirements needed to run the project, such as
 - Code editor (e.g., Visual Studio Code)
 - Web browser
 
-### Installation
+## Installation
 
 StudyBuddy is a web-based application. There is no need for installation. Simply access the StudyBuddy website [??] to start using it instantly.
 
@@ -79,14 +79,14 @@ StudyBuddy is a web-based application. There is no need for installation. Simply
 
 StudyBuddy is designed to be user-friendly. Here's how you can make the most of it:
 
-### Customizing the Timer
+## Customizing the Timer
 
 1. Open StudyBuddy in your web browser.
 2. Adjust the study and break durations using the provided input fields.
 3. Click the "Start" button to initiate your study session.
 <!-- 4. StudyBuddy will notify you when it's time to take a break. -->
 
-### Changing the Background
+## Changing the Background
 
 
 1. Open StudyBuddy in your web browser.

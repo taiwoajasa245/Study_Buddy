@@ -626,10 +626,6 @@ video {
   margin-top: 3.5rem;
 }
 
-.mt-2{
-  margin-top: 0.5rem;
-}
-
 .mt-3{
   margin-top: 0.75rem;
 }
@@ -1193,6 +1189,10 @@ video {
     margin-bottom: 0px;
   }
 
+  .sm\:mt-1{
+    margin-top: 0.25rem;
+  }
+
   .sm\:block{
     display: block;
   }
@@ -1229,5 +1229,23 @@ video {
   .sm\:text-base{
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:hidden{
+    display: none;
+  }
+
+  .md\:max-h-full{
+    max-height: 100%;
+  }
+
+  .md\:w-2\/4{
+    width: 50%;
+  }
+
+  .md\:rounded-2xl{
+    border-radius: 1rem;
   }
 }

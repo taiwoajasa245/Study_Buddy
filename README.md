@@ -2,6 +2,22 @@
 
 ![StudyBuddy Background](/icon/logo.png)
 
+
+## Table of Contents
+
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [installation](#installation)
+- [Usage](#usage)
+- [Customizing the Timer](#CustomizingtheTimer)
+- [Changing the Background](#ChangingtheBackground)
+- [Contributing](#contributing)
+- [Contact](#Contact)
+<!-- - [License](#license) -->
+
 ## Introduction
 
 StudyBuddy is a customizable study timer designed to help you stay focused and productive during your study sessions. With StudyBuddy, you have the flexibility to adjust the timer settings and change the background, creating a personalized study experience that works best for you.
@@ -15,12 +31,45 @@ StudyBuddy is a customizable study timer designed to help you stay focused and p
 
 ## Getting Started
 
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/taiwoajasa245/Study_Buddy.git
+
+2. **Navigate to the project directory:**
+
+   ```bash
+    cd Study_Buddy
+
+3. **Install project dependencies:**
+
+   ```bash
+    npm install 
+
+4. **Build the project:**
+
+   ```bash
+    npm run dev
+
+5. **Start the development server:**
+
+   ```bash
+   npm run start
+
+6. Open your web browser and visit http://localhost:3000 to view the project locally.
+
 ### Prerequisites
 
 To use StudyBuddy, you'll need:
 
 - A modern web browser (Google Chrome, Firefox, or Safari recommended).
 - An internet connection for background image selection.
+
+List any prerequisites or system requirements needed to run the project, such as:
+
+- Node.js and npm installed
+- Code editor (e.g., Visual Studio Code)
+- Web browser
 
 ### Installation
 
@@ -55,8 +104,6 @@ We welcome contributions to improve StudyBuddy! If you'd like to contribute, ple
 4. Submit a pull request.
 
 We appreciate your help in making StudyBuddy better!
-
-
 
 ## Contact 
 

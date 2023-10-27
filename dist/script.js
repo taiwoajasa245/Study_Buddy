@@ -320,6 +320,7 @@ const longBreakInputTimer = document.getElementById('longbreak-input-timer');
 
 saveCheckBox(); 
 saveChangesButton.addEventListener('click', () => { 
+    timerType = 'pomodoro';
     const mainModal = document.querySelector("#modal-Grand_parent"); 
     mainModal.style.display = "none"; 
     
@@ -386,12 +387,41 @@ function saveCheckBox() {
 }
 
 const resetBtn = document.getElementById('rest-all'); 
-console.log(resetBtn);
+resetBtn.addEventListener('click',function() { 
+    reset(); 
+})
 
 function reset() {
     const mainModal = document.querySelector("#modal-Grand_parent"); 
     mainModal.style.display = "none"; 
-    
+
+    userValue = 25; 
+    shortUserValue = 5; 
+    longUserValue = 10; 
+
+    min.textContent = shortUserValue; 
+    min.textContent = longUserValue; 
+    min.textContent = userValue; 
+
+    // // Check if the user entered a valid number (e.g., not empty or non-numeric)
+    // if (!isNaN(userValue)) {
+    //     // Use the user's input value
+    //     userValue = 25; 
+    //     min.textContent = userValue; 
+    //     // alert(`You entered: ${userValue}`); // Replace this with your desired action
+    // } else if (!isNaN(shortUserValue)) {
+    //     shortUserValue = 5; 
+    //     min.textContent = shortUserValue; 
+    //     // alert(`You entered: ${shortBreak}`); // Replace this with your desired action
+    // } else if (!isNaN(longUserValue)) { 
+    //     longUserValue = 10; 
+    //     min.textContent = longUserValue; 
+    //     // alert(`You entered: ${longUserValue}`); // Replace this with your desired action
+    // } else {
+    //     alert('Please enter a valid number.');
+    // }
+
+      
 }
 
 

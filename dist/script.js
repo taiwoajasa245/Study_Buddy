@@ -321,6 +321,7 @@ const longBreakInputTimer = document.getElementById('longbreak-input-timer');
 saveCheckBox(); 
 saveChangesButton.addEventListener('click', () => { 
     timerType = 'pomodoro';
+    topBtn(t, w, t, w, w, bl); 
     const mainModal = document.querySelector("#modal-Grand_parent"); 
     mainModal.style.display = "none"; 
     
@@ -392,6 +393,8 @@ resetBtn.addEventListener('click',function() {
 })
 
 function reset() {
+    timerType = 'pomodoro';
+    topBtn(t, w, t, w, w, bl);
     const mainModal = document.querySelector("#modal-Grand_parent"); 
     mainModal.style.display = "none"; 
 

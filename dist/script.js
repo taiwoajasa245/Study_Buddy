@@ -351,10 +351,6 @@ saveChangesButton.addEventListener('click', () => {
 });
 
 
-
-
-
-
 function saveCheckBox() { 
     // Get all checkboxes with the class "custom-checkbox"
     const checkboxes = document.querySelectorAll('.custom-checkbox');
@@ -404,27 +400,7 @@ function reset() {
 
     min.textContent = shortUserValue; 
     min.textContent = longUserValue; 
-    min.textContent = userValue; 
-
-    // // Check if the user entered a valid number (e.g., not empty or non-numeric)
-    // if (!isNaN(userValue)) {
-    //     // Use the user's input value
-    //     userValue = 25; 
-    //     min.textContent = userValue; 
-    //     // alert(`You entered: ${userValue}`); // Replace this with your desired action
-    // } else if (!isNaN(shortUserValue)) {
-    //     shortUserValue = 5; 
-    //     min.textContent = shortUserValue; 
-    //     // alert(`You entered: ${shortBreak}`); // Replace this with your desired action
-    // } else if (!isNaN(longUserValue)) { 
-    //     longUserValue = 10; 
-    //     min.textContent = longUserValue; 
-    //     // alert(`You entered: ${longUserValue}`); // Replace this with your desired action
-    // } else {
-    //     alert('Please enter a valid number.');
-    // }
-
-      
+    min.textContent = userValue;      
 }
 
 

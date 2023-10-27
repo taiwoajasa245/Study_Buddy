@@ -385,9 +385,14 @@ function saveCheckBox() {
     });
 }
 
-// function resar(params) {
+const resetBtn = document.getElementById('rest-all'); 
+console.log(resetBtn);
+
+function reset() {
+    const mainModal = document.querySelector("#modal-Grand_parent"); 
+    mainModal.style.display = "none"; 
     
-// }
+}
 
 
 

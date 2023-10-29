@@ -672,8 +672,16 @@ video {
   height: 2rem;
 }
 
+.h-full{
+  height: 100%;
+}
+
 .h-screen{
   height: 100vh;
+}
+
+.w-8{
+  width: 2rem;
 }
 
 .w-9{

@@ -68,9 +68,9 @@
         <main class=" px-10 py-5  flex flex-col justify-evenly   items-center ">
             <section id="top-btn" class=" w-100rem h-100rem">
                 <ul class="w-[100%] h-[100%] flex justify-evenly  flex-col sm:flex-row items-start"> 
-                    <li id="pomodoro" class="p-2 mx-3 border-2 border-white text-sm sm:text-base bg-white text-black font-semibold rounded-[20px] px-5 sm:px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ">pomodoro</li>
-                    <li id="short_break" class=" p-2 sm:text-base mx-3 text-sm  sm:mx-3 sm:my-0 my-5 border-2 border-white  font-semibold rounded-[20px] px-4 sm:px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">short break</li>
-                    <li id="long_break" class="p-2 text-sm mx-3 sm:text-base border-2 border-white font-semibold rounded-[20px] px-5 sm:px-4  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">long break</li>
+                    <li id="pomodoro" class=" py-2 px-4 mx-1 sm:my-0 my-3 border-2 border-white  sm:text-base bg-white text-black font-semibold rounded-[20px]  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none ">pomodoro</li>
+                    <li id="short_break" class=" py-2 px-3 mx-0 sm:mx-5 sm:my-0 my-3 border-2 border-white font-semibold rounded-[20px] hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">short break</li>
+                    <li id="long_break" class=" py-2 px-4 mx-0 sm:my-0 my-3  border-2 border-white font-semibold rounded-[20px]  hover:bg-white hover:text-black hover:cursor-pointer transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">long break</li>
                 </ul>
             </section>
             <section>
@@ -97,7 +97,7 @@
         </main>
 
 
-        <footer id="foot" class="  w-full p-1 mt-14 flex h-[2rem] hover:flex justify-between items-center ">
+        <footer id="foot" class=" hidden   w-full p-1 mt-14 sm:flex h-[2rem] hover:flex justify-between items-center ">
             <div id="music" class="w-8">
                 <iframe id="spotifyPlaylist" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1ByzdKSKWgv9M18IEUScfQ?utm_source=generator&theme=0" width="100%" height="100" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
@@ -182,7 +182,7 @@
                         </div>
 
                         <div id="short-break-div" class=" sm:px-5 ">
-                            <label for="shortbreak-input-timer class=" font-bold text-base">Short Break</label> <br>
+                            <label for="shortbreak-input-timer" class=" font-bold text-base">Short Break</label> <br>
                             <input type="number" id="shortbreak-input-timer"  name="num" value="5"  maxlength="5" class=" w-full sm:w-24 p-2 mt-1 mb-1 rounded-md bg-black border ">
                             <p class="text-gray-500 font-bold">minutes</p>
                         </div>

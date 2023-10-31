@@ -1270,6 +1270,14 @@ video {
     flex-direction: row;
   }
 
+  .sm\:flex-row-reverse{
+    flex-direction: row-reverse;
+  }
+
+  .sm\:flex-col-reverse{
+    flex-direction: column-reverse;
+  }
+
   .sm\:rounded-2xl{
     border-radius: 1rem;
   }

@@ -110,20 +110,19 @@
 
     <!-- Working on the settings  -->
 
-    <div id="modal-Grand_parent" class="w-full h-screen bg-b absolute backdrop-blur-sm bg-white/30  bottom-0 left-0 flex items-center hidden transition-all justify-center">
+    <div id="modal-Grand_parent" class="w-full h-full bg-b absolute backdrop-blur-sm bg-white/30  bottom-0 left-0 flex items-center hidden transition-all justify-center">
         <div id="modal_parent" class="w-full h-full  bg-black text-white sm:rounded-2xl sm:w-2/4 sm:h-4/5 md:rounded-2xl md:w-2/4 md:max-h-full md:bg-red  ">
             <div class="  flex justify-between p-3">
                 <div></div>
                 <button id="close-modal" > <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg> </button>
             </div>
             <div class="modal-content h-2/3 sm:h-3/4 mx-8 sm:flex">
-                <div id="nav_panel" class="font-bold flex sm:block my-10 sm:my-0 justify-center " >
+                <div id="nav_panel" class="font-bold flex sm:block my-5 sm:my-0 justify-center " >
                     <p id="nav-general" class="mr-2 sm:mr-0 relative cursor-pointer transition after:content-[''] after:absolute after:bg-red-500 after:left-0 after:bottom-[-5px] after:h-[3px] after:w-0  after:transition-[.5s] hover:after:w-full">General</p> 
                     <p id="nav-timer" class="sm:mt-3 mr-2 sm:mr-0-0 relative cursor-pointer transition-all after:content-[''] after:absolute after:bg-red-500 after:left-0 after:bottom-[-5px] after:h-[3px] after:w-0  after:transition-[.5s] hover:after:w-full ">Timers</p>   
                     <p id="nav-sounds" class="sm:mt-3 mr-2 sm:mr-0 relative cursor-pointer after:content-[''] after:absolute after:bg-red-500 after:left-0 after:bottom-[-5px] after:h-[3px] after:w-0  after:transition-[.5s] hover:after:w-full">Sounds</p>   
                     <p id="nav-account" class="sm:mt-3  relative cursor-pointer after:content-[''] after:absolute after:bg-red-500 after:left-0 after:bottom-[-5px] after:h-[3px] after:w-0  after:transition-[.5s] hover:after:w-full ">Account</p> 
                 </div>
-
 
                 <div id="plain_panel"  class="sm:ml-20 text-sm">
                     <div id="select-plain">
@@ -161,7 +160,7 @@
                         <p class="ml-1 font-bold text-xs sm:text-base"> Show Spotify playlist</p>
                     </div>
 
-                    <div id="wrapper" class="text-gray-500 font-semibold  sm:block text-xs">
+                    <div id="wrapper" class="text-gray-500 font-semibold hidden sm:block text-xs">
                         <div id="quick-msg" class=" sm:mt-1 mt-1 ">
                             Have feature requests, or an issue to report?Fill <br /> out our <a href="#" class="text-red-600 underline ">quick feedback form here</a> and join our <br /> <a href="#" class="text-red-600 underline">Discord Community.</a> <br>
                         </div>
@@ -254,13 +253,13 @@
                 </div>
     
             </div>
-            <div id="close_and_save" class="sm:mx-8 mx-0 ">
-                <div id="wrapper" class="pt-7 text-center flex sm:flex-row-reverse justify-between items-center ">
+            <div id="close_and_save" class="sm:mx-8 mx-10 mb-20  ">
+                <div id="wrapper" class="text-center sm:flex  sm:flex-row-reverse justify-between items-center ">
                     <div class="sm:block ">
-                        <button id="save-changes-btn" class="p-1 mx-1 text-black text-base  bg-white hover:border-white hover:border font-semibold hover:bg-black  hover:text-white  rounded-[20px] px-4 transition  motion-reduce:transition-none motion-reduce:hover:transform-none " > Save changes </button>
-                        <button id="close-modal" class="p-2 mx-1 my-5 sm:my-0 text-white hover:bg-black bg-gray-500 hover:border-white hover:border hover:text-white hover:font-semibold  rounded-[20px]  transition  motion-reduce:transition-none motion-reduce:hover:transform-none " > Close </button>
+                        <button id="save-changes-btn" class="p-1 sm:mx-1  text-black text-sm  bg-white hover:border-white hover:border font-semibold hover:bg-black  hover:text-white  rounded-[20px] px-4 transition  motion-reduce:transition-none motion-reduce:hover:transform-none " > Save changes </button>
+                        <button id="close-modal" class="p-2 text-sm  my-5 sm:my-0 text-white hover:bg-black bg-gray-500 hover:border-white hover:border hover:text-white hover:font-semibold  rounded-[20px]  transition  motion-reduce:transition-none motion-reduce:hover:transform-none " > Close </button>
                     </div>
-                    <button  id="rest-all" class="p-1 mx-1 text-red-500 text-base border border-red-500  hover:bg-red-500  hover:text-black hover:font-semibold  rounded-[20px] px-4 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none font-bold " > Reset all </button>
+                    <button  id="rest-all" class="p-1  text-red-500 text-sm border border-red-500  hover:bg-red-500  hover:text-black hover:font-semibold  rounded-[20px] px-4 transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none font-bold " > Reset all </button>
                 </div>
             </div>
         </div>

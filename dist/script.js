@@ -124,7 +124,7 @@ reload.addEventListener('click', () => {
             secl = `0${0}`; 
             min.textContent = minl;
             sec.textContent = secl;
-            staticTimer = 'pomo'
+            staticTimer = 'pomo'; 
 
         }else if ( timerType === 'shortbreak' ) { 
             minl= `0${shortUserValue}`; 

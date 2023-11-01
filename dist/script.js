@@ -10,7 +10,6 @@ function hideEle() { fullScreenLogo.style.display = "none" };
 footer.addEventListener('mouseover', () => { showHidden() }); 
 footer.addEventListener('mouseout', () => { hideEle() }); 
 
-
 // Function to toggle fullscreen
 function toggleFullScreen() {
 

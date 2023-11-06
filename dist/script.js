@@ -108,6 +108,14 @@ function countDown() {
     // reduce second every 1 second
     secl = 60; 
     startInterval();
+    if(userValue <= 0) { 
+        console.log('start btn dey mad ni');
+        userValue = `${0}0`; 
+        secl = userValue;
+        console.log(userValue);
+    }
+
+
   
     
 }; 
@@ -258,7 +266,8 @@ const resumeMeBtn = document.getElementById('resume-me');
 startBtn.addEventListener('click', () =>  {
     pauseMeBtn.style.display = "block"; 
     startBtn.style.display = "none"; 
-    countDown(); 
+    countDown();  
+
 }); 
 
 pauseMeBtn.addEventListener('click', () =>  {
@@ -327,10 +336,23 @@ saveChangesButton.addEventListener('click', () => {
     userValue = parseInt(pomodoroInputTimer.value, 10); // Parse the input value as an integer
     shortUserValue = parseInt(shortBreakInputTimer.value, 10); // Parse the input value as an integer
     longUserValue = parseInt(longBreakInputTimer.value, 10); // Parse the input value as an integer
+
+
+    console.log(userValue);
+    if (isNaN(userValue)) {
+       userValue = 0; 
+       if(userValue <= 0) { 
+        console.log('start btn dey mad ni');
+        userValue = `${0}0`; 
+        console.log(userValue);
+        secl = userValue;
+    }
+    }
     
     // Get the user's input value from the input field
 
     // Check if the user entered a valid number (e.g., not empty or non-numeric)
+    console.log('this is me clicked ');
     if (!isNaN(userValue)) {
         // Use the user's input value
         min.textContent = userValue; 
